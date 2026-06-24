@@ -4,7 +4,7 @@ import { launch } from "../lib/copy";
 export default function AnnouncementBar() {
   return (
     <a
-      href="/#waitlist"
+      href={`${import.meta.env.BASE_URL}#waitlist`}
       className="blue-gradient group block text-white transition-[filter] hover:brightness-[1.05]"
     >
       <div className="mx-auto flex max-w-6xl flex-wrap items-center justify-center gap-x-2 gap-y-1 px-5 py-2 text-center text-sm font-medium">

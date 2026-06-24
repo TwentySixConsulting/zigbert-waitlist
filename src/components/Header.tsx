@@ -14,13 +14,13 @@ export default function Header() {
         </Link>
 
         <nav className="hidden items-center gap-7 text-sm font-medium text-muted md:flex">
-          <a href="/#what" className="transition-colors hover:text-ink">
+          <a href={`${import.meta.env.BASE_URL}#what`} className="transition-colors hover:text-ink">
             What Is Zigbert
           </a>
-          <a href="/#how" className="transition-colors hover:text-ink">
+          <a href={`${import.meta.env.BASE_URL}#how`} className="transition-colors hover:text-ink">
             How It Works
           </a>
-          <a href="/#about" className="transition-colors hover:text-ink">
+          <a href={`${import.meta.env.BASE_URL}#about`} className="transition-colors hover:text-ink">
             About
           </a>
           <Link href="/methodology" className="transition-colors hover:text-ink">
@@ -28,7 +28,7 @@ export default function Header() {
           </Link>
         </nav>
 
-        <a href="/#waitlist" className="btn-primary text-sm">
+        <a href={`${import.meta.env.BASE_URL}#waitlist`} className="btn-primary text-sm">
           Join The Waitlist
         </a>
       </div>
