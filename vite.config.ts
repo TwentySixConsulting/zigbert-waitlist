@@ -2,8 +2,8 @@ import { defineConfig } from "vite";
 import react from "@vitejs/plugin-react";
 import tailwindcss from "@tailwindcss/vite";
 
-// Served from a GitHub Pages project subpath in production, root in dev.
-export default defineConfig(({ command }) => ({
-  base: command === "build" ? "/zigbert-waitlist/" : "/",
+// Served from the root of the custom domain (zigbert.co.uk).
+export default defineConfig({
+  base: "/",
   plugins: [react(), tailwindcss()],
-}));
+});
