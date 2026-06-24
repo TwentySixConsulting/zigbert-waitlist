@@ -344,6 +344,10 @@ export const waitlist = {
     title: "Thank you for signing up!",
     body: "You're on the Zigbert waitlist. We'll reach out before launch in September 2026 with your early access and launch pricing. A confirmation email is on its way to your inbox.",
   },
+  successReturning: {
+    title: "You're already on the list!",
+    body: "Good news, you're already signed up. We'll be in touch before launch in September 2026 with your early access and launch pricing. No need to do anything else.",
+  },
   fields: {
     name: "Your name",
     company: "Company",

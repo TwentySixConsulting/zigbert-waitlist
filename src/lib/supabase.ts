@@ -18,14 +18,15 @@ export type WaitlistEntry = {
   role?: string | null;
 };
 
-export async function joinWaitlist(entry: WaitlistEntry): Promise<void> {
+export async function joinWaitlist(entry: WaitlistEntry): Promise<{ alreadyOnList: boolean }> {
   if (!supabase) {
     throw new Error("Supabase is not configured (missing env vars).");
   }
   const { error } = await supabase.from("waitlist").insert(entry);
   if (error) {
     // Unique-violation on email = already signed up; treat as success upstream.
-    if (error.code === "23505") return;
+    if (error.code === "23505") return { alreadyOnList: true };
     throw error;
   }
+  return { alreadyOnList: false };
 }

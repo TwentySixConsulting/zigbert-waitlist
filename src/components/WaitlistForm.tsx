@@ -10,6 +10,7 @@ const emailRe = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
 export default function WaitlistForm() {
   const [status, setStatus] = useState<Status>("idle");
+  const [alreadyOnList, setAlreadyOnList] = useState(false);
   const [errors, setErrors] = useState<Record<string, string>>({});
   const f = waitlist.fields;
 
@@ -39,7 +40,8 @@ export default function WaitlistForm() {
 
     setStatus("submitting");
     try {
-      await joinWaitlist({ name, company, email, company_size, role });
+      const { alreadyOnList } = await joinWaitlist({ name, company, email, company_size, role });
+      setAlreadyOnList(alreadyOnList);
       setStatus("done");
     } catch (err) {
       console.error(err);
@@ -48,6 +50,7 @@ export default function WaitlistForm() {
   }
 
   if (status === "done") {
+    const msg = alreadyOnList ? waitlist.successReturning : waitlist.success;
     return (
       <div className="card relative mx-auto max-w-xl overflow-hidden p-10 text-center">
         <Confetti />
@@ -65,7 +68,7 @@ export default function WaitlistForm() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.15, duration: 0.4 }}
         >
-          {waitlist.success.title}
+          {msg.title}
         </motion.h3>
         <motion.p
           className="relative mx-auto mt-3 max-w-md text-muted"
@@ -73,7 +76,7 @@ export default function WaitlistForm() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.25, duration: 0.4 }}
         >
-          {waitlist.success.body}
+          {msg.body}
         </motion.p>
       </div>
     );
