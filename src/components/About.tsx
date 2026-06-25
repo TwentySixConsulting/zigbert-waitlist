@@ -3,7 +3,7 @@ import Reveal from "./Reveal";
 
 export default function About() {
   return (
-    <section id="about" className="scroll-mt-24 py-20 md:py-28">
+    <section id="about" className="scroll-mt-24 pt-20 pb-12 md:pt-28 md:pb-16">
       <div className="mx-auto max-w-6xl px-5">
         <Reveal className="mx-auto max-w-2xl text-center">
           <span className="eyebrow">{about.eyebrow}</span>
@@ -22,19 +22,17 @@ export default function About() {
           ))}
         </div>
 
-        <Reveal className="mx-auto mt-10 max-w-2xl text-center">
-          <p className="text-[0.95rem] leading-relaxed text-muted">{about.more}</p>
-          <div className="mt-6 flex flex-wrap justify-center gap-2.5">
-            <a href={about.links.site.url} target="_blank" rel="noreferrer" className="btn-primary text-sm">
-              {about.links.site.label}
-            </a>
-            <a href={about.links.email.url} className="btn-ghost text-sm">
-              {about.links.email.label}
-            </a>
-            <a href={about.links.linkedin.url} target="_blank" rel="noreferrer" className="btn-ghost text-sm">
-              {about.links.linkedin.label}
-            </a>
-          </div>
+        {/* links — one spaced-out row */}
+        <Reveal className="mt-9 flex flex-wrap items-center justify-center gap-4 sm:gap-7">
+          <a href={about.links.site.url} target="_blank" rel="noreferrer" className="btn-primary text-sm">
+            {about.links.site.label}
+          </a>
+          <a href={about.links.email.url} className="btn-ghost text-sm">
+            {about.links.email.label}
+          </a>
+          <a href={about.links.linkedin.url} target="_blank" rel="noreferrer" className="btn-ghost text-sm">
+            {about.links.linkedin.label}
+          </a>
         </Reveal>
       </div>
     </section>

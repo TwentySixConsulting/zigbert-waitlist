@@ -21,7 +21,7 @@ export default function FounderNote() {
     .toUpperCase();
 
   return (
-    <section id="founder" className="bg-surface/60 py-20 md:py-28">
+    <section id="founder" className="bg-surface/60 pt-12 pb-20 md:pt-16 md:pb-28">
       <div className="mx-auto max-w-5xl px-5">
         <Reveal as="div" className="card p-7 sm:p-10">
           <span className="eyebrow">{founder.eyebrow}</span>
