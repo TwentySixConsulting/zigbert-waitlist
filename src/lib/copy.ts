@@ -370,30 +370,52 @@ export const methodology = {
   },
   sections: [
     {
-      heading: "The data",
+      heading: "Real, live job postings",
       paragraphs: [
-        "Zigbert draws on a current database of over 1.5 million UK job salary records, captured directly from job boards nationwide and growing all the time. Every posting is dissected for its responsibilities, organisational context, job level and function, so we're always comparing like with like, not just matching on a job title.",
-        "That unparalleled dataset places each role in the context of the wider market: how salaries are moving and which skills are most in demand right now. The result is a clear lower-quartile, median and upper-quartile picture for each role, and a single market rate you can act on.",
+        "Zigbert is built on real job adverts, collected every day from dozens of UK job boards, both the big generalist platforms and specialist boards across technology, healthcare, legal, engineering, construction, education and the third sector.",
+        "Each posting we capture records the job title, employer, location, full description, advertised salary where it's disclosed, employment type and date. That adds up to a current database of over 1.5 million UK salary records, growing every day. Where the same role is advertised in several locations, we keep each one, so genuine regional pay differences are captured rather than averaged away.",
+      ],
+    },
+    {
+      heading: "Cleaned, checked and monitored",
+      paragraphs: [
+        "Raw adverts are messy, so every record is standardised before it is used. Salaries are parsed from the many formats employers use (ranges, hourly or annual, vague wording), locations are standardised, duplicate adverts are removed, and thin or low-quality postings are filtered out.",
+        "Automated quality checks run on every batch, looking at field completeness, salary distributions, geographic balance and duplicate rates. Every source is monitored daily, so if a board changes or something looks off, it is flagged and dealt with before it can affect the data behind your dashboard.",
+      ],
+    },
+    {
+      heading: "Classified to compare like with like",
+      paragraphs: [
+        "A salary figure only means something next to genuinely comparable roles. So every posting is classified on two dimensions: its function (what the role actually does) and its industry (the sector it sits in), using a classification built specifically for the UK labour market, with a clear definition for every category.",
+        "Function and industry together define the comparator group. A finance role in investment banking is measured against a different market than a finance role in a charity, even for a similar job. The classification combines AI with a purpose-trained model and produces a confidence score for every record; anything uncertain is routed to a specialist to check before it is used.",
+      ],
+    },
+    {
+      heading: "Grounded in official data",
+      paragraphs: [
+        "Our own data is supplemented with authoritative external sources, including ONS ASHE earnings figures, sector employment data, regional wage indices and broader economic indicators such as inflation and interest rates.",
+        "That keeps every benchmark anchored to the wider economy, not just to whatever happens to be advertised this week, and lets your dashboard set pay in the context of what the market is actually doing.",
       ],
     },
     {
       heading: "Three inputs, one rate",
       paragraphs: [
-        "We've distilled the methodology used by the major salary surveys into a streamlined process. You tell us three things about a role: its title, function and level; your industry and location; and your organisation size. Zigbert returns the market rate.",
-        "Those three inputs do a lot of work: they pin down exactly what the role is, account for sector norms and regional variation across the UK, and make sure you're compared with organisations that genuinely look like yours.",
+        "For all of that depth, getting a benchmark is simple. You tell us three things about a role: its title, function and level; your industry and location; and your organisation size. Zigbert returns the market rate.",
+        "Those three inputs do a lot of work: they pin down exactly what the role is, account for sector norms and regional variation across the UK, and make sure you are compared with organisations that genuinely look like yours.",
       ],
     },
     {
       heading: "Expert review",
       paragraphs: [
-        "This is what sets Zigbert apart. Self-service pay tools can produce results that simply don't look right: outliers, mismatched levels, or data drawn from the wrong comparator group. Without expert knowledge, it's hard to know what to trust.",
-        "Every Zigbert dashboard is reviewed by one of our reward specialists, who confirms it makes sense before publication. You get the speed of a dashboard with the reassurance that an expert has looked at it and said, “Yes, that's good.”",
+        "This is what sets Zigbert apart. Self-service pay tools can produce results that simply don't look right: outliers, mismatched roles, or data drawn from the wrong comparator group. Without expert knowledge, it's hard to know what to trust.",
+        "Every Zigbert dashboard is reviewed by one of our reward specialists, who confirms it makes sense before publication. Behind the scenes, accuracy is measured continuously and by category, records are reviewed daily and weekly, and the classification is refreshed and version-controlled on a regular cycle.",
+        "You get the speed of a dashboard with the reassurance that an expert has looked at it and said, “Yes, that's good.”",
       ],
     },
     {
       heading: "Refreshed monthly",
       paragraphs: [
-        "Market rates move with inflation, talent scarcity and sector trends, so a benchmarking tool that refreshes once a year can't keep pace. Zigbert updates every month, bringing in newly validated data across roles, levels and industries.",
+        "Market rates move with inflation, talent scarcity and sector trends, so a benchmarking tool that refreshes once a year can't keep pace. The underlying data updates continuously, and your dashboard refreshes every month with newly validated data across roles and industries.",
         "That means whether you're setting a new-hire offer or reviewing your entire pay structure, you're acting on what the market looks like now, not six months ago.",
       ],
     },
