@@ -21,27 +21,27 @@ export default function FounderNote() {
     .toUpperCase();
 
   return (
-    <section id="founder" className="pt-4 pb-20 md:pt-6 md:pb-28">
-      <div className="mx-auto max-w-6xl px-5">
-        <Reveal as="div" className="card p-7 sm:p-10">
+    <section id="founder" className="scroll-mt-24 bg-surface/60 py-20 md:py-28">
+      <div className="mx-auto max-w-7xl px-5">
+        <Reveal as="div" className="card p-8 sm:p-12">
           <span className="eyebrow">{founder.eyebrow}</span>
 
-          <div className="mt-6 grid gap-8 md:grid-cols-[auto_1fr] md:gap-10">
+          <div className="mt-7 grid gap-8 md:grid-cols-[13rem_1fr] md:gap-12">
             {/* byline column */}
-            <div className="flex flex-row items-center gap-4 md:w-44 md:flex-col md:items-start md:text-left">
+            <div className="flex flex-row items-center gap-5 md:flex-col md:items-start md:text-left">
               {founder.photo ? (
                 <img
                   src={asset(founder.photo)}
                   alt={founder.name}
-                  className="h-20 w-20 shrink-0 rounded-2xl object-cover ring-2 ring-line md:h-28 md:w-28"
+                  className="h-24 w-24 shrink-0 rounded-2xl object-cover ring-2 ring-line md:h-40 md:w-40"
                 />
               ) : (
-                <span className="accent-gradient flex h-20 w-20 shrink-0 items-center justify-center rounded-2xl text-xl font-bold text-white md:h-28 md:w-28">
+                <span className="accent-gradient flex h-24 w-24 shrink-0 items-center justify-center rounded-2xl text-2xl font-bold text-white md:h-40 md:w-40">
                   {initials}
                 </span>
               )}
-              <div className="min-w-0 md:mt-4">
-                <p className="display text-lg font-bold leading-tight text-ink">{founder.name}</p>
+              <div className="min-w-0 md:mt-5">
+                <p className="display text-xl font-bold leading-tight text-ink">{founder.name}</p>
                 <p className="mt-1 text-sm leading-snug text-muted">{founder.role}</p>
                 {founder.linkedin && (
                   <a
@@ -49,7 +49,7 @@ export default function FounderNote() {
                     target="_blank"
                     rel="noreferrer"
                     aria-label={`${founder.name} on LinkedIn`}
-                    className="btn-ghost mt-3 !px-3 !py-1.5 text-sm"
+                    className="btn-ghost mt-4 !px-3 !py-1.5 text-sm"
                   >
                     <LinkedinIcon className="h-4 w-4" />
                     LinkedIn
@@ -59,13 +59,13 @@ export default function FounderNote() {
             </div>
 
             {/* letter */}
-            <div className="space-y-4 leading-relaxed text-muted">
+            <div className="space-y-4 text-[1.05rem] leading-relaxed text-ink/90 md:border-l md:border-line md:pl-12">
               {founder.intro.map((p) => (
                 <p key={p}>{p}</p>
               ))}
 
-              <p className="font-medium text-ink">{founder.pointsLead}</p>
-              <ul className="space-y-3">
+              <p className="font-semibold text-ink">{founder.pointsLead}</p>
+              <ul className="space-y-2.5">
                 {founder.points.map((pt) => (
                   <li key={pt} className="flex items-start gap-3 text-ink">
                     <span aria-hidden="true" className="mt-0.5 font-semibold text-clay">
@@ -80,7 +80,7 @@ export default function FounderNote() {
                 <p key={p}>{p}</p>
               ))}
 
-              <p className="text-lg font-semibold text-ink">{founder.closing}</p>
+              <p className="display text-lg font-bold text-ink">{founder.closing}</p>
             </div>
           </div>
         </Reveal>
