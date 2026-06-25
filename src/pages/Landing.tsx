@@ -27,8 +27,8 @@ export default function Landing() {
       <Scope />
       <BackedBy />
       <About />
-      <Trust />
       <FounderNote />
+      <Trust />
       <MethodologyTeaser />
       <WaitlistSection />
       <StickyCTA />

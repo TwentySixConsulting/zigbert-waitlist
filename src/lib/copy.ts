@@ -293,18 +293,6 @@ export const about = {
       body: "Role mapping and grading structures you can stand behind.",
     },
   ],
-  approach: {
-    title: "The art of reward",
-    body: "We don't believe in black-box formulas. The data is only ever as good as the analyst interpreting it, so every benchmark blends advertised rates, published surveys and anonymised client data with specialist review. It's the same standard that sits behind every number in Zigbert.",
-  },
-  payography: {
-    title: "Powered by Payography",
-    body: "Our proprietary data engine captures thousands of UK job adverts every week, keeping our market view current and powering Zigbert behind the scenes.",
-  },
-  clients: {
-    title: "Trusted by",
-    body: "From national charities to housing associations and financial services, including organisations like Samaritans, Mind, Southern Housing and the FSCS, alongside many more.",
-  },
   links: {
     site: { label: "Visit twentysixconsulting.co.uk", url: "https://twentysixconsulting.co.uk" },
     email: { label: "consultants@twentysixconsulting.co.uk", url: "mailto:consultants@twentysixconsulting.co.uk" },
