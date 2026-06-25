@@ -1,8 +1,15 @@
-import { Linkedin } from "lucide-react";
 import { founder } from "../lib/copy";
 import Reveal from "./Reveal";
 
 const asset = (file: string) => `${import.meta.env.BASE_URL}${file}`;
+
+function LinkedinIcon({ className }: { className?: string }) {
+  return (
+    <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" className={className}>
+      <path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14zM8.34 9.67H5.67V18h2.67V9.67zM7 6.33a1.55 1.55 0 1 0 0 3.1 1.55 1.55 0 0 0 0-3.1zM18.33 18v-4.57c0-2.45-1.31-3.59-3.06-3.59-1.41 0-2.04.78-2.39 1.32v-1.13h-2.67V18h2.67v-4.65c0-1.23.83-1.5 1.13-1.5.3 0 1.32.27 1.32 1.5V18h2.67z" />
+    </svg>
+  );
+}
 
 export default function FounderNote() {
   const initials = founder.name
@@ -44,7 +51,7 @@ export default function FounderNote() {
                 aria-label={`${founder.name} on LinkedIn`}
                 className="btn-ghost ml-auto !px-3 !py-2"
               >
-                <Linkedin className="h-4 w-4" />
+                <LinkedinIcon className="h-4 w-4" />
                 <span className="hidden sm:inline">LinkedIn</span>
               </a>
             )}
