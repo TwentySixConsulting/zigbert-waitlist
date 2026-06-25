@@ -360,7 +360,7 @@ export const waitlist = {
     size: "Company size (optional)",
     role: "Your role (optional)",
   },
-  sizes: ["1–49", "50–199", "200–999", "1,000–10,000", "10,000+"],
+  sizes: ["1–49", "50–99", "100–149", "150–199", "200–249", "250–299", "300–499", "500+"],
   submit: "Join The Waitlist",
   submitting: "Joining…",
   error: "Something went wrong. Please try again, or email us directly.",
