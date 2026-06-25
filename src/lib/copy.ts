@@ -312,16 +312,28 @@ export const about = {
   },
 };
 
-// ── Founder / expert note (humanises the "expert-reviewed" promise) ──
-// TODO(Millie): confirm the name, role and (optional) headshot below.
-// Drop a square photo at public/founder.png and set `photo: "/founder.png"`.
+// ── Founder note (a personal letter from Rachel Crafts) ─────────────
+// TODO(Millie): drop a square headshot at public/rachel.jpg and set photo: "rachel.jpg".
 export const founder = {
-  eyebrow: "From the team behind it",
-  quote:
-    "We built Zigbert because reward decisions are too important to be left to a number you can't trust. Every benchmark you see has been looked at by one of our specialists and signed off, to the same standard we hold for our consulting clients. That's the difference.",
-  name: "The TwentySix reward team", // ← replace with a named specialist
-  role: "Reward specialists · TwentySix Consulting",
-  photo: "", // ← set to "/founder.png" once added
+  eyebrow: "A note from our founder",
+  name: "Rachel Crafts",
+  role: "Managing Director · TwentySix Consulting",
+  linkedin: "https://uk.linkedin.com/in/rachelcrafts",
+  photo: "", // ← set to "rachel.jpg" once the headshot is added to public/
+  intro: [
+    "Employee pay is the biggest single cost for most businesses — and after 30 years in reward, I know how daunting it is to get right. Pay too little and you can't recruit. Pay too much and the wrong people stay put forever. And pay review season burns hours of management time going round in circles, rarely doing much for motivation.",
+    "I've spent my career demystifying reward — as a Director of Reward, an ACAS Independent Expert in Equal Value, and an adviser to organisations across the whole spectrum, from tiny grassroots charities to global corporations. For the last 20 years I've done this through TwentySix Consulting, where my team and I give businesses the data, tools and framework to manage pay and benefits simply and cost-effectively.",
+  ],
+  pointsLead: "Time and again, I've seen two things:",
+  points: [
+    "Reward made more complex than it needs to be — bamboozling the people team and infuriating line managers.",
+    "Managers left without the tools to have proper conversations about pay with their teams.",
+  ],
+  outro: [
+    "This hits hardest in growing businesses — the ones without a reward team, where HR or finance is juggling pay alongside everything else, recruiting and restructuring at pace. Good pay data is exactly the management information they need, and it's the piece too many are missing.",
+    "So I built Zigbert: simple pay benchmarking for growing companies. Share your roles, we match them against live UK salary data and check every number ourselves before it reaches you, and you get a clear dashboard showing exactly how your pay and benefits compare — refreshed every month, with real experts behind it. The evidence managers need to have honest, confident conversations about pay. No jargon, no reward specialist on your payroll.",
+  ],
+  closing: "If you're trying to get pay right without the guesswork, I'd love to help.",
 };
 
 // ── Methodology teaser (links to /methodology) ──────────────────────
