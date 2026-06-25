@@ -124,7 +124,7 @@ export const howItWorks = {
       bullets: [
         "Job title, function and level",
         "Our simple form or your own spreadsheet",
-        "Private and secure, encrypted in transit and at rest",
+        "Private and secure",
       ],
     },
     {
@@ -193,7 +193,7 @@ export const included = {
     {
       tag: "Trends",
       title: "Market hotspots & trends",
-      body: "We'll tell you what the market is doing and when your skills are in demand, to support your reward reviews.",
+      body: "See what the market is doing and when your skills are in demand, alongside the wider economic picture, CPI, employment trends, interest rates and more, to support your reward reviews.",
     },
     {
       tag: "Flexible",
