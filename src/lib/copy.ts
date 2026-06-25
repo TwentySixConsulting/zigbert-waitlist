@@ -392,8 +392,8 @@ export const methodology = {
     {
       heading: "Classified to compare like with like",
       paragraphs: [
-        "A salary figure only means something next to genuinely comparable roles. So every posting is classified on two dimensions: its function (what the role actually does) and its industry (the sector it sits in), using a classification built specifically for the UK labour market, with a clear definition for every category.",
-        "Function and industry together define the comparator group. A finance role in investment banking is measured against a different market than a finance role in a charity, even for a similar job. The classification runs on our own model, which our data scientist continues to train and build on, and produces a confidence score for every record; anything uncertain is routed to a specialist to check before it is used.",
+        "A salary figure only means something next to genuinely comparable roles. So every posting is classified on three dimensions: its function (what the role actually does), its industry (the sector it sits in), and its job level (how senior the role is, for example manager or senior), using a classification built specifically for the UK labour market, with a clear definition for every category.",
+        "Function, industry and job level together define the comparator group. A finance role in investment banking is measured against a different market than a finance role in a charity, even for a similar job. The classification runs on our own model, which our data scientist continues to train and build on, and produces a confidence score for every record; anything uncertain is routed to a specialist to check before it is used.",
       ],
     },
     {
