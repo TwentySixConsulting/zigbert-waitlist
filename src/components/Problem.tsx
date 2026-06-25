@@ -39,14 +39,16 @@ export default function Problem() {
         ))}
       </div>
 
-      <Reveal className="mt-12" delay={0.05}>
-        <div className="flex flex-col items-center gap-5 rounded-[1.25rem] bg-ink px-8 py-8 text-center sm:flex-row sm:text-left md:px-12">
-          <div className="display accent-text text-5xl font-bold sm:text-6xl">
-            {problem.costStat.value}
-          </div>
-          <p className="max-w-2xl text-lg leading-relaxed text-white/80">{problem.costStat.body}</p>
-        </div>
-      </Reveal>
+      <div className="mt-12 grid gap-5 md:grid-cols-2">
+        {problem.costStats.map((s, i) => (
+          <Reveal as="div" key={s.value} stagger index={i}>
+            <div className="flex h-full flex-col gap-3 rounded-[1.25rem] bg-ink px-7 py-7 md:px-9">
+              <div className="display accent-text text-4xl font-bold sm:text-5xl">{s.value}</div>
+              <p className="text-[1.02rem] leading-relaxed text-white/80">{s.body}</p>
+            </div>
+          </Reveal>
+        ))}
+      </div>
     </section>
   );
 }

@@ -13,7 +13,7 @@ import {
 const ease = [0.22, 1, 0.36, 1] as const;
 
 const trustChips = [
-  "2M+ UK salaries / year",
+  "1.5M+ salary records",
   "Every benchmark expert-reviewed",
   "Refreshed monthly",
 ];

@@ -142,13 +142,11 @@ const distributionData = [
 ];
 
 export function DistributionPreview() {
-  const total = distributionData.reduce((s, d) => s + d.value, 0);
-  const atOrAbove = distributionData.slice(2).reduce((s, d) => s + d.value, 0);
   return (
     <PreviewShell
       eyebrow="Distribution"
-      title={`How your ${total} roles sit vs market`}
-      footer={`${atOrAbove} of ${total} at or above market median`}
+      title="How your roles sit vs market"
+      footer="See where each role lands across the market"
     >
       <div className="flex h-full items-center gap-3">
         <ResponsiveContainer width="48%" height="100%">

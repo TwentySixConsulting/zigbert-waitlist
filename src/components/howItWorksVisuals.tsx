@@ -70,7 +70,7 @@ export function BenchmarkVisual() {
       <div className="space-y-3 p-5">
         <div className="grid grid-cols-3 gap-3">
           {[
-            { v: "2M+", l: "Salaries / yr" },
+            { v: "1.5M+", l: "Salary records" },
             { v: "Verified", l: "By a specialist" },
             { v: "Monthly", l: "Refreshed" },
           ].map((s) => (

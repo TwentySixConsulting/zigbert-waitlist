@@ -15,7 +15,7 @@ export default function Header() {
 
         <nav className="hidden items-center gap-7 text-sm font-medium text-muted md:flex">
           <a href={`${import.meta.env.BASE_URL}#what`} className="transition-colors hover:text-ink">
-            What Is Zigbert
+            What Is Zigbert?
           </a>
           <a href={`${import.meta.env.BASE_URL}#how`} className="transition-colors hover:text-ink">
             How It Works

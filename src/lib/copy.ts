@@ -26,7 +26,7 @@ export const hero = {
   headline: "Know what to pay.",
   headlineAccent: "And trust the answer.",
   subhead:
-    "Zigbert gives you a clear market rate for every role, drawn from two million UK salaries a year and reviewed by our reward specialists. No complexity, no confusion, no second-guessing the data.",
+    "Zigbert gives you a clear market rate for every role, drawn from our database of over 1.5 million UK salary records and reviewed by our reward specialists. No complexity, no confusion, no second-guessing the data.",
   ctaPrimary: "Join The Waitlist",
   ctaSecondary: "See How It Works",
   note: "Sign up takes seconds. We'll email you once before launch, then that's it.",
@@ -46,11 +46,11 @@ export const whatIsZigbert = {
       title: "Pay",
       oneLiner: "Where you sit on pay, role by role.",
       body:
-        "Market data and benchmarks across 47 employers: quartile position, trends, and hotspots. A clear market rate for every role, and exactly where you have room to move.",
+        "A clear market rate for every role you give us, with quartile position, market trends and hotspots. See exactly where each role sits and where you have room to move.",
       points: [
-        "40 roles benchmarked, fully in scope",
-        "Quartile position, role-by-role analysis",
-        "Market trends and pay-movement context",
+        "A clear market rate for every role",
+        "Quartile position, role by role",
+        "Market trends and pay hotspots",
       ],
     },
     {
@@ -59,11 +59,11 @@ export const whatIsZigbert = {
       title: "Benefits",
       oneLiner: "Your benefits offer, through the market's eyes.",
       body:
-        "Benchmarked across 287 employers and 5 categories: where you over- or under-provide. See coverage, category strength, and how your offer compares benefit by benefit.",
+        "See how your benefits compare against the market: total coverage, strength by reward category, and exactly where you over- or under-provide.",
       points: [
-        "287 employers, 5 categories",
+        "Total coverage vs the market",
+        "Provision by reward category",
         "Where you over- or under-provide",
-        "Coverage and strengths at a glance",
       ],
     },
   ],
@@ -95,10 +95,16 @@ export const problem = {
       highlight: true,
     },
   ],
-  costStat: {
-    value: "£10,000",
-    body: "Overpaying by just 1% costs £10,000 for every £1m of payroll. Getting pay right is one of the simplest ways to protect and grow your profit.",
-  },
+  costStats: [
+    {
+      value: "£10,000",
+      body: "Overpaying by just 1% costs £10,000 for every £1m of payroll. Getting pay right is one of the simplest ways to protect and grow your profit.",
+    },
+    {
+      value: "6–9 months",
+      body: "Underpay your best people and they leave. Replacing someone typically costs six to nine months of their salary in hiring, onboarding and lost productivity, so paying fairly is one of the cheapest ways to keep them.",
+    },
+  ],
 };
 
 // ── How it works (slide 6) ──────────────────────────────────────────
@@ -123,9 +129,9 @@ export const howItWorks = {
       n: "02",
       eyebrow: "Step 02",
       title: "We benchmark it against the market",
-      body: "Your role is matched against two million UK salaries a year, adjusted for your industry, location and organisation size, then reviewed by a reward specialist.",
+      body: "Your role is matched against our database of over 1.5 million UK salary records, adjusted for your industry, location and organisation size, then reviewed by a reward specialist.",
       bullets: [
-        "2M+ UK salaries analysed every year",
+        "1.5M+ salary records in our database",
         "Adjusted for industry, location and size",
         "Every benchmark specialist-reviewed",
       ],
@@ -240,7 +246,7 @@ export const scope = {
 
 // ── Stats band (slides 4 / 8 / 13) ──────────────────────────────────
 export const stats = [
-  { value: "2M+", label: "UK salaries analysed every year" },
+  { value: "1.5M+", label: "records in our UK salary database" },
   { value: "Monthly", label: "data refresh, never stale" },
   { value: "1 rate", label: "clear market rate per role" },
   { value: "Expert", label: "every benchmark specialist-reviewed" },
@@ -317,7 +323,7 @@ export const methodologyTeaser = {
   eyebrow: "For the curious",
   title: "How the numbers are built",
   body:
-    "No black box. Zigbert analyses two million UK salaries a year, captured from job boards nationwide and classified by role, level and region. Then every benchmark is reviewed by a specialist. Here's exactly how.",
+    "No black box. Zigbert draws on a current database of over 1.5 million UK salary records, captured from job boards nationwide and classified by role, level and region. Then every benchmark is reviewed by a specialist. Here's exactly how.",
   cta: "Read The Full Methodology",
 };
 
@@ -360,7 +366,7 @@ export const methodology = {
     {
       heading: "The data",
       paragraphs: [
-        "Zigbert analyses around two million UK job salaries every year, captured directly from job boards nationwide. Every posting is dissected for its responsibilities, organisational context, job level and function, so we're always comparing like with like, not just matching on a job title.",
+        "Zigbert draws on a current database of over 1.5 million UK job salary records, captured directly from job boards nationwide and growing all the time. Every posting is dissected for its responsibilities, organisational context, job level and function, so we're always comparing like with like, not just matching on a job title.",
         "That unparalleled dataset places each role in the context of the wider market: how salaries are moving and which skills are most in demand right now. The result is a clear lower-quartile, median and upper-quartile picture for each role, and a single market rate you can act on.",
       ],
     },
