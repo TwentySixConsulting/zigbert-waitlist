@@ -296,7 +296,6 @@ export const about = {
       body: "Role mapping and grading structures you can stand behind.",
     },
   ],
-  more: "Need more than benchmarks? Our consultants turn the data into pay structures, salary bands and clear messaging. And this is just the start: benefits, full grading structures, skills-based benchmarking and a Zigbert MCP for real-time reward are on the way.",
   links: {
     site: { label: "Visit twentysixconsulting.co.uk", url: "https://twentysixconsulting.co.uk" },
     email: { label: "consultants@twentysixconsulting.co.uk", url: "mailto:consultants@twentysixconsulting.co.uk" },
