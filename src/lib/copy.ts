@@ -112,9 +112,9 @@ export const problem = {
 // ── How it works (slide 6) ──────────────────────────────────────────
 export const howItWorks = {
   eyebrow: "How it works",
-  title: "Three inputs. One clear market rate.",
+  title: "A few details. One clear market rate.",
   body:
-    "We've distilled the methodology behind the major salary surveys into a streamlined process. Tell us three things about a role, and we do the rest, with your dashboard ready within 48 hours of uploading your roles.",
+    "We've distilled the methodology behind the major salary surveys into a streamlined process. Tell us a few details about each role, and we do the rest, with your dashboard ready within 48 hours of uploading your roles.",
   steps: [
     {
       n: "01",
@@ -404,10 +404,10 @@ export const methodology = {
       ],
     },
     {
-      heading: "Three inputs, one rate",
+      heading: "A few details, one rate",
       paragraphs: [
-        "For all of that depth, getting a benchmark is simple. You tell us three things about a role: its title, function and level; your industry and location; and your organisation size. Zigbert returns the market rate.",
-        "Those three inputs do a lot of work: they pin down exactly what the role is, account for sector norms and regional variation across the UK, and make sure you are compared with organisations that genuinely look like yours.",
+        "For all of that depth, getting a benchmark is simple. You tell us a few details about a role, its title, function and level, your industry and location, your organisation size and a little more where it helps, and Zigbert returns the market rate.",
+        "Those details do a lot of work: they pin down exactly what the role is, account for sector norms and regional variation across the UK, and make sure you are compared with organisations that genuinely look like yours.",
       ],
     },
     {
