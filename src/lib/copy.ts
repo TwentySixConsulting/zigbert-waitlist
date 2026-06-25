@@ -372,22 +372,24 @@ export const methodology = {
     {
       heading: "Real, live job postings",
       paragraphs: [
-        "Zigbert is built on real job adverts, collected every day from dozens of UK job boards, both the big generalist platforms and specialist boards across technology, healthcare, legal, engineering, construction, education and the third sector.",
+        "Zigbert is built on real job adverts, collected every day from dozens of UK job boards, both the big generalist platforms and specialist boards.",
         "Each posting we capture records the job title, employer, location, full description, advertised salary where it's disclosed, employment type and date. That adds up to a current database of over 1.5 million UK salary records, growing every day. Where the same role is advertised in several locations, we keep each one, so genuine regional pay differences are captured rather than averaged away.",
+        "Because it is built from live adverts rather than an annual survey, the picture moves with the market in real time. Traditional salary surveys rely on a smaller pool of employers volunteering figures once a year, so they are often months out of date by the time they are published. Zigbert reflects what employers are actually offering right now, across far more roles and organisations, so you can see pay shifting before it costs you a hire.",
+        "Long before any of this was automated, our team built the dataset by hand, so it reaches back over the past decade rather than only today's market. That history lets us see how pay has actually moved over time, not just take a snapshot.",
       ],
     },
     {
       heading: "Cleaned, checked and monitored",
       paragraphs: [
         "Raw adverts are messy, so every record is standardised before it is used. Salaries are parsed from the many formats employers use (ranges, hourly or annual, vague wording), locations are standardised, duplicate adverts are removed, and thin or low-quality postings are filtered out.",
-        "Automated quality checks run on every batch, looking at field completeness, salary distributions, geographic balance and duplicate rates. Every source is monitored daily, so if a board changes or something looks off, it is flagged and dealt with before it can affect the data behind your dashboard.",
+        "From there the dataset is continuously checked and monitored for quality, so anything that doesn't look right is caught and corrected before it can affect the data behind your dashboard.",
       ],
     },
     {
       heading: "Classified to compare like with like",
       paragraphs: [
         "A salary figure only means something next to genuinely comparable roles. So every posting is classified on two dimensions: its function (what the role actually does) and its industry (the sector it sits in), using a classification built specifically for the UK labour market, with a clear definition for every category.",
-        "Function and industry together define the comparator group. A finance role in investment banking is measured against a different market than a finance role in a charity, even for a similar job. The classification combines AI with a purpose-trained model and produces a confidence score for every record; anything uncertain is routed to a specialist to check before it is used.",
+        "Function and industry together define the comparator group. A finance role in investment banking is measured against a different market than a finance role in a charity, even for a similar job. The classification runs on our own model, which our data scientist continues to train and build on, and produces a confidence score for every record; anything uncertain is routed to a specialist to check before it is used.",
       ],
     },
     {
