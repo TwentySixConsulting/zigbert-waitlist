@@ -340,7 +340,8 @@ export const methodologyTeaser = {
 export const waitlist = {
   eyebrow: "Be first in · Launching September 2026",
   title: "Join the Zigbert waitlist",
-  body: "Sign up now and we'll invite you the moment Zigbert opens in September 2026. It only takes a few seconds, and early sign-ups get first access and launch pricing. Not sure it's right for you yet? Sign up anyway and we'll send more information and arrange a demo so you can see exactly how it works.",
+  body: "Sign up now and we'll invite you the moment Zigbert opens in September 2026. It only takes a few seconds, and early sign-ups get first access and launch pricing.",
+  reassure: "Not sure it's the right fit yet? Sign up and we'll happily send you more information and arrange a demo, so you can see exactly how it works.",
   contactLead: "Prefer to talk first? Get in touch to find out more:",
   perk:
     "Want a taste now? Once you're on the list, send us your 5–10 hardest roles and we'll show you the market rate, how confident the benchmark is, and where your pay sits.",

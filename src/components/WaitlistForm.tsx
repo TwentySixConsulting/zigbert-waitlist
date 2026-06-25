@@ -87,6 +87,7 @@ export default function WaitlistForm() {
       <span className="eyebrow">{waitlist.eyebrow}</span>
       <h2 className="display mt-3 text-2xl font-bold sm:text-3xl">{waitlist.title}</h2>
       <p className="mt-3 text-muted">{waitlist.body}</p>
+      <p className="mt-4 text-muted">{waitlist.reassure}</p>
 
       <form className="mt-6 space-y-4" onSubmit={onSubmit} noValidate>
         <Field label={f.name} name="name" error={errors.name} autoComplete="name" />
