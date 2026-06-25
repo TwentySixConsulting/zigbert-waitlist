@@ -39,7 +39,7 @@ export const whatIsZigbert = {
   eyebrow: "What is Zigbert?",
   title: "Your pay and benefits, through the market's eyes",
   lede:
-    "Zigbert is a reward intelligence platform from TwentySix Consulting. It answers two questions every organisation wrestles with, in one simple dashboard: are we paying the right rate, and is our benefits offer competitive? Every answer is grounded in real market data, and your dashboard is reviewed by a reward specialist before it reaches you.",
+    "Zigbert is a reward intelligence platform from TwentySix Consulting. It answers the two questions every organisation wrestles with — are we paying the right rate, and is our benefits offer competitive? — in one simple dashboard, grounded in real market data and checked by a reward specialist before it reaches you.",
   period: "Q2 2026",
   pillars: [
     {
