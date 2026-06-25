@@ -114,7 +114,7 @@ export const howItWorks = {
   eyebrow: "How it works",
   title: "Three inputs. One clear market rate.",
   body:
-    "We've distilled the methodology behind the major salary surveys into a streamlined process. Tell us three things about a role, and we do the rest.",
+    "We've distilled the methodology behind the major salary surveys into a streamlined process. Tell us three things about a role, and we do the rest, with your dashboard ready within 48 hours of uploading your roles.",
   steps: [
     {
       n: "01",
@@ -208,7 +208,7 @@ export const cadence = {
   eyebrow: "Always current",
   title: "Updated every month, not every year",
   body:
-    "Market rates move with inflation, talent scarcity and sector trends. A tool that refreshes once a year can't keep pace. Zigbert updates monthly, so your decisions always reflect the market right now and support your reward cycle all year round.",
+    "Market rates move with inflation, talent scarcity and sector trends. A tool that refreshes once a year can't keep pace. Zigbert updates monthly, so your decisions always reflect the market right now and support your reward cycle all year round. It's all one simple monthly subscription, with pay, benefits, updates and expert support included.",
   points: [
     {
       title: "Never out of date",
@@ -277,7 +277,7 @@ export const about = {
   eyebrow: "Who's behind Zigbert",
   title: "Built by TwentySix Consulting",
   lede:
-    "Zigbert is built by TwentySix Consulting, a UK reward and HR consultancy specialising in intelligent pay benchmarking. For two decades we've helped organisations of every size get pay and benefits right, combining serious market data with the judgement of people who do reward for a living.",
+    "Zigbert is built by TwentySix Consulting, a UK reward consultancy specialising in intelligent pay benchmarking. For two decades we've helped organisations of every size get pay and benefits right, combining serious market data with the judgement of people who do reward for a living.",
   services: [
     {
       title: "Pay & benefits benchmarking",
@@ -324,7 +324,7 @@ export const founder = {
     "This hits hardest in growing businesses — the ones without a reward team, where HR or finance is juggling pay alongside everything else, recruiting and restructuring at pace. Good pay data is exactly the management information they need, and it's the piece too many are missing.",
     "So I built Zigbert: simple pay benchmarking for growing companies. Share your roles, we match them against live UK salary data and check every number ourselves before it reaches you, and you get a clear dashboard showing exactly how your pay and benefits compare — refreshed every month, with real experts behind it. The evidence managers need to have honest, confident conversations about pay. No jargon, no reward specialist on your payroll.",
   ],
-  closing: "If you're trying to get pay right without the guesswork, I'd love to help.",
+  closing: "If you're trying to get pay right without the guesswork, we'd love to help.",
 };
 
 // ── Methodology teaser (links to /methodology) ──────────────────────
@@ -341,6 +341,7 @@ export const waitlist = {
   eyebrow: "Be first in · Launching September 2026",
   title: "Join the Zigbert waitlist",
   body: "Sign up now and we'll invite you the moment Zigbert opens in September 2026. It only takes a few seconds, and early sign-ups get first access and launch pricing.",
+  contactLead: "Prefer to talk first? Get in touch to find out more:",
   perk:
     "Want a taste now? Once you're on the list, send us your 5–10 hardest roles and we'll show you the market rate, how confident the benchmark is, and where your pay sits.",
   success: {

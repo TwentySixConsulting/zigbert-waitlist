@@ -1,6 +1,6 @@
 import { useState, type FormEvent, type ReactNode } from "react";
 import { motion } from "framer-motion";
-import { waitlist } from "../lib/copy";
+import { waitlist, brand } from "../lib/copy";
 import { joinWaitlist } from "../lib/supabase";
 import Confetti from "./Confetti";
 
@@ -130,6 +130,13 @@ export default function WaitlistForm() {
         {status === "error" && (
           <p className="text-center text-sm text-red-600">{waitlist.error}</p>
         )}
+
+        <p className="border-t border-line pt-4 text-center text-sm text-muted">
+          {waitlist.contactLead}{" "}
+          <a href={`mailto:${brand.email}`} className="font-medium text-clay-deep hover:underline">
+            {brand.email}
+          </a>
+        </p>
       </form>
     </div>
   );
