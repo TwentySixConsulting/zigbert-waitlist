@@ -120,11 +120,11 @@ export const howItWorks = {
       n: "01",
       eyebrow: "Step 01",
       title: "Tell us about the role",
-      body: "Job title, function and level. This shows us exactly what the role is and where it sits in the organisation.",
+      body: "Job title, function and level, entered in our simple form or uploaded from your own spreadsheet. This shows us exactly what each role is and where it sits in the organisation.",
       bullets: [
         "Job title, function and level",
-        "Takes under a minute per role",
-        "No spreadsheets to wrangle",
+        "Our simple form or your own spreadsheet",
+        "Private and secure, encrypted in transit and at rest",
       ],
     },
     {
@@ -145,7 +145,7 @@ export const howItWorks = {
       body: "You don't just get a number back. Every role sits in your own private dashboard, with the market rate, quartile position, trends and specialist commentary explaining what it means and what to do next. Pop out any chart to share with your board or leadership team.",
       bullets: [
         "A living dashboard, not a one-off report",
-        "Specialist commentary and analysis, not just numbers",
+        "Specialist commentary and analysis",
         "Board-ready charts you can export and share",
       ],
     },

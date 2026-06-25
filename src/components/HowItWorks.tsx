@@ -13,34 +13,38 @@ export default function HowItWorks() {
   const steps = howItWorks.steps;
   const [index, setIndex] = useState(0);
   const [paused, setPaused] = useState(false);
+  const [interacted, setInteracted] = useState(false);
   const [dir, setDir] = useState<1 | -1>(1);
   const reduce = useReducedMotion();
   const sectionRef = useRef<HTMLElement>(null);
   const inView = useInView(sectionRef, { amount: 0.35 });
 
+  // Manual navigation (dots, arrows, swipe) freezes the auto-advance.
   const goTo = useCallback(
     (next: number) => {
       const total = steps.length;
       const n = ((next % total) + total) % total;
       setDir(((n - index + total) % total === 1 ? 1 : -1) as 1 | -1);
       setIndex(n);
+      setInteracted(true);
     },
     [index, steps.length],
   );
   const next = useCallback(() => goTo(index + 1), [goTo, index]);
   const prev = useCallback(() => goTo(index - 1), [goTo, index]);
 
-  // Always (re)start from step 1 when the section scrolls into view.
+  // Always (re)start from step 1 (and resume auto-play) when the section scrolls into view.
   useEffect(() => {
     if (inView) {
       setDir(1);
       setIndex(0);
+      setInteracted(false);
     }
   }, [inView]);
 
-  // Auto-advance only while the section is on screen.
+  // Auto-advance only while on screen and the user hasn't taken control.
   useEffect(() => {
-    if (!inView || paused || reduce) return;
+    if (!inView || paused || reduce || interacted) return;
     const id = window.setInterval(() => {
       if (document.visibilityState === "visible") {
         setDir(1);
@@ -48,7 +52,7 @@ export default function HowItWorks() {
       }
     }, AUTO_MS);
     return () => window.clearInterval(id);
-  }, [inView, paused, reduce, steps.length]);
+  }, [inView, paused, reduce, interacted, steps.length]);
 
   const onDragEnd = (_: unknown, info: PanInfo) => {
     if (info.offset.x < -60) next();
