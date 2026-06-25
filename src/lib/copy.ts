@@ -347,7 +347,7 @@ export const waitlist = {
     "Want a taste now? Once you're on the list, send us your 5–10 hardest roles and we'll show you the market rate, how confident the benchmark is, and where your pay sits.",
   success: {
     title: "Thank you for signing up!",
-    body: "You're on the Zigbert waitlist. We'll reach out before launch in September 2026 with your early access and launch pricing. A confirmation email is on its way to your inbox.",
+    body: "You're on the Zigbert waitlist. We'll be in touch shortly to walk you through a demo and give you all the launch pricing details.",
   },
   successReturning: {
     title: "You're already on the list!",
