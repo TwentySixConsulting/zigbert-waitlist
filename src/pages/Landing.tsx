@@ -6,7 +6,8 @@ import StatsBand from "../components/StatsBand";
 import Slides from "../components/Slides";
 import Cadence from "../components/Cadence";
 import Scope from "../components/Scope";
-import AboutFounder from "../components/AboutFounder";
+import About from "../components/About";
+import FounderNote from "../components/FounderNote";
 import Trust from "../components/Trust";
 import MethodologyTeaser from "../components/MethodologyTeaser";
 import WaitlistSection from "../components/WaitlistSection";
@@ -23,7 +24,8 @@ export default function Landing() {
       <Slides />
       <Cadence />
       <Scope />
-      <AboutFounder />
+      <About />
+      <FounderNote />
       <Trust />
       <MethodologyTeaser />
       <WaitlistSection />
