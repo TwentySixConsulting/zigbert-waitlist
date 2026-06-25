@@ -256,23 +256,10 @@ export const charts = {
   benefitsLabel: "Benefits",
 };
 
-// ── Backed by TwentySix + roadmap (slides 12 / 16) ──────────────────
-export const backedBy = {
+// ── Who's behind Zigbert: TwentySix Consulting ──────────────────────
+export const about = {
   eyebrow: "Who's behind Zigbert",
   title: "Built by TwentySix Consulting",
-  body:
-    "Zigbert brings together the rigour of professional pay surveys with the simplicity your organisation actually needs, no reward expertise required. It's backed by a team that's spent two decades doing reward properly.",
-  points: [
-    { title: "20+ years of reward expertise", body: "Pay & benefits benchmarking, reward frameworks, job levelling and evaluation." },
-    { title: "Consultancy when you need more", body: "Bolt-on support to turn benchmarks into pay structures, salary bands and clear messaging for your team." },
-    { title: "This is just the start", body: "Benefits, full grading structures, skills-based benchmarking and a Zigbert MCP for real-time, agentic reward are on the way." },
-  ],
-};
-
-// ── About TwentySix Consulting ──────────────────────────────────────
-export const about = {
-  eyebrow: "About TwentySix",
-  title: "The reward consultancy behind Zigbert",
   lede:
     "Zigbert is built by TwentySix Consulting, a UK reward and HR consultancy specialising in intelligent pay benchmarking. For two decades we've helped organisations of every size get pay and benefits right, combining serious market data with the judgement of people who do reward for a living.",
   services: [
@@ -293,6 +280,7 @@ export const about = {
       body: "Role mapping and grading structures you can stand behind.",
     },
   ],
+  more: "Need more than benchmarks? Our consultants turn the data into pay structures, salary bands and clear messaging. And this is just the start: benefits, full grading structures, skills-based benchmarking and a Zigbert MCP for real-time reward are on the way.",
   links: {
     site: { label: "Visit twentysixconsulting.co.uk", url: "https://twentysixconsulting.co.uk" },
     email: { label: "consultants@twentysixconsulting.co.uk", url: "mailto:consultants@twentysixconsulting.co.uk" },

@@ -6,7 +6,6 @@ import StatsBand from "../components/StatsBand";
 import Slides from "../components/Slides";
 import Cadence from "../components/Cadence";
 import Scope from "../components/Scope";
-import BackedBy from "../components/BackedBy";
 import About from "../components/About";
 import Trust from "../components/Trust";
 import FounderNote from "../components/FounderNote";
@@ -25,7 +24,6 @@ export default function Landing() {
       <Slides />
       <Cadence />
       <Scope />
-      <BackedBy />
       <About />
       <FounderNote />
       <Trust />

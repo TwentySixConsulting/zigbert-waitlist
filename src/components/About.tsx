@@ -24,6 +24,10 @@ export default function About() {
           ))}
         </div>
 
+        <Reveal className="mx-auto mt-8 max-w-2xl">
+          <p className="text-[0.95rem] leading-relaxed text-muted">{about.more}</p>
+        </Reveal>
+
         <Reveal className="mt-9 flex flex-wrap justify-center gap-3">
           <a href={about.links.site.url} target="_blank" rel="noreferrer" className="btn-primary">
             {about.links.site.label}
