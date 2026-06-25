@@ -61,7 +61,7 @@ export const whatIsZigbert = {
       title: "Benefits",
       oneLiner: "Your benefits offer, through the market's eyes.",
       body:
-        "See how your benefits compare against the market: total coverage, strength by reward category, and exactly where you over- or under-provide.",
+        "See how your benefits compare against the market, from overall coverage and strength by category through to exactly where you over- or under-provide.",
       points: [
         "Total coverage vs the market",
         "Provision by reward category",
@@ -221,6 +221,10 @@ export const cadence = {
     {
       title: "Catch shifts early",
       body: "Month-on-month movement shows you where pay is heating up before it costs you the hire, not six months too late.",
+    },
+    {
+      title: "Track your progress over time",
+      body: "Because the data refreshes every month, you can watch how your pay position moves and how your overall paybill is tracking against the market, turning benchmarking into an ongoing measure of progress rather than a once-a-year snapshot.",
     },
   ],
 };
