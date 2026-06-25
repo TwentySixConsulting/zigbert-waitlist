@@ -8,7 +8,9 @@ export default function WaitlistSection() {
       <div className="mx-auto max-w-6xl px-5">
         <Reveal className="mx-auto mb-10 max-w-2xl text-center">
           <h2 className="display text-3xl font-bold leading-tight sm:text-4xl">
-            {brand.taglineLead} <span className="accent-text">{brand.taglineAccent}</span>
+            {brand.taglineLead}
+            <br />
+            <span className="accent-text">{brand.taglineAccent}</span>
           </h2>
         </Reveal>
         <WaitlistForm />

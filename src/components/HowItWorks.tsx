@@ -1,5 +1,5 @@
-import { useCallback, useEffect, useMemo, useState } from "react";
-import { AnimatePresence, motion, useReducedMotion, type PanInfo } from "framer-motion";
+import { useCallback, useEffect, useMemo, useRef, useState } from "react";
+import { AnimatePresence, motion, useInView, useReducedMotion, type PanInfo } from "framer-motion";
 import { ChevronLeft, ChevronRight, CheckCircle2 } from "lucide-react";
 import { howItWorks } from "../lib/copy";
 import Reveal from "./Reveal";
@@ -15,6 +15,8 @@ export default function HowItWorks() {
   const [paused, setPaused] = useState(false);
   const [dir, setDir] = useState<1 | -1>(1);
   const reduce = useReducedMotion();
+  const sectionRef = useRef<HTMLElement>(null);
+  const inView = useInView(sectionRef, { amount: 0.35 });
 
   const goTo = useCallback(
     (next: number) => {
@@ -28,8 +30,17 @@ export default function HowItWorks() {
   const next = useCallback(() => goTo(index + 1), [goTo, index]);
   const prev = useCallback(() => goTo(index - 1), [goTo, index]);
 
+  // Always (re)start from step 1 when the section scrolls into view.
   useEffect(() => {
-    if (paused || reduce) return;
+    if (inView) {
+      setDir(1);
+      setIndex(0);
+    }
+  }, [inView]);
+
+  // Auto-advance only while the section is on screen.
+  useEffect(() => {
+    if (!inView || paused || reduce) return;
     const id = window.setInterval(() => {
       if (document.visibilityState === "visible") {
         setDir(1);
@@ -37,7 +48,7 @@ export default function HowItWorks() {
       }
     }, AUTO_MS);
     return () => window.clearInterval(id);
-  }, [paused, reduce, steps.length]);
+  }, [inView, paused, reduce, steps.length]);
 
   const onDragEnd = (_: unknown, info: PanInfo) => {
     if (info.offset.x < -60) next();
@@ -55,7 +66,7 @@ export default function HowItWorks() {
   );
 
   return (
-    <section id="how" className="scroll-mt-24 bg-surface/60 py-20 md:py-28">
+    <section ref={sectionRef} id="how" className="scroll-mt-24 bg-surface/60 py-20 md:py-28">
       <div
         className="mx-auto max-w-6xl px-5"
         onMouseEnter={() => setPaused(true)}
@@ -155,6 +166,18 @@ export default function HowItWorks() {
               <span className="eyebrow !text-clay-bright">The result&nbsp;&nbsp;</span>
               {howItWorks.result}
             </p>
+          </div>
+        </Reveal>
+
+        {/* benefits follow the same process */}
+        <Reveal className="mx-auto mt-6 max-w-3xl" delay={0.1}>
+          <div className="card flex items-start gap-3 border-l-4 border-clay px-6 py-5">
+            <div>
+              <p className="font-semibold text-clay-deep">{howItWorks.benefits.eyebrow}</p>
+              <p className="mt-1 text-sm leading-relaxed text-muted sm:text-[0.95rem]">
+                {howItWorks.benefits.body}
+              </p>
+            </div>
           </div>
         </Reveal>
       </div>

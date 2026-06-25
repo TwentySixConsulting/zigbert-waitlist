@@ -39,7 +39,7 @@ export const whatIsZigbert = {
   eyebrow: "What is Zigbert?",
   title: "Your pay and benefits, through the market's eyes",
   lede:
-    "Zigbert is a reward intelligence platform from TwentySix Consulting. It answers two questions every organisation wrestles with, in one simple dashboard: are we paying the right rate, and is our benefits offer competitive? Every answer is drawn from real market data and signed off by a reward specialist.",
+    "Zigbert is a reward intelligence platform from TwentySix Consulting. It answers two questions every organisation wrestles with, in one simple dashboard: are we paying the right rate, and is our benefits offer competitive? Every answer is grounded in real market data, and your dashboard is reviewed by a reward specialist before it reaches you.",
   period: "Q2 2026",
   pillars: [
     {
@@ -135,22 +135,26 @@ export const howItWorks = {
       bullets: [
         "1.5M+ salary records in our database",
         "Adjusted for industry, location and size",
-        "Every benchmark specialist-reviewed",
+        "Every dashboard specialist-reviewed",
       ],
     },
     {
       n: "03",
       eyebrow: "Step 03",
-      title: "Get a clear rate and the charts",
-      body: "See a single market rate for the role, where it sits across the quartiles, and the trends behind it. Ready to drop straight into your pay review.",
+      title: "It all lands in your dashboard",
+      body: "You don't just get a number back. Every role sits in your own private dashboard, with the market rate, quartile position, trends and specialist commentary explaining what it means and what to do next. Pop out any chart to share with your board or leadership team.",
       bullets: [
-        "One clear market rate per role",
-        "Quartile position and market trends",
-        "Charts you can share with leaders",
+        "A living dashboard, not a one-off report",
+        "Specialist commentary and analysis, not just numbers",
+        "Board-ready charts you can export and share",
       ],
     },
   ],
-  result: "A single market rate for the role, reviewed and signed off by a reward specialist.",
+  result: "A clear market rate for every role, in a dashboard reviewed and signed off by a reward specialist.",
+  benefits: {
+    eyebrow: "Benefits work the same way",
+    body: "Share your benefits, we compare them against the market, and your dashboard shows exactly where you sit, plus what's standard, emerging and worth watching for benefits in your sector.",
+  },
 };
 
 // ── Why you can trust it (slides 3 + 13) ────────────────────────────
@@ -160,9 +164,9 @@ export const trust = {
   body:
     "The real risk with self-service pay platforms is results that simply don't look right: outliers, mismatched job levels, or data drawn from the wrong comparator group. Without expert knowledge, it's hard to know what to trust.",
   quote: "“Yes, that's good.”",
-  quoteSub: "Every Zigbert benchmark is reviewed by a specialist who confirms it makes sense before you ever see it.",
+  quoteSub: "Every Zigbert dashboard is reviewed by a specialist who confirms it makes sense before you ever see it.",
   points: [
-    { title: "Curated data", body: "Not aggregated noise. Every benchmark is specialist-reviewed and quality-assured before publication." },
+    { title: "Curated data", body: "Not aggregated noise. Every dashboard is specialist-reviewed and quality-assured before you see it." },
     { title: "Monthly cadence", body: "Monthly updates keep you ahead of the market, not catching up with it." },
     { title: "Clear outputs", body: "A single market rate per role, with no ambiguity and no interpretation required." },
     { title: "Instant access", body: "Cloud-based and always available. Add or change roles any time." },
@@ -325,7 +329,7 @@ export const methodologyTeaser = {
   eyebrow: "For the curious",
   title: "How the numbers are built",
   body:
-    "No black box. Zigbert draws on a current database of over 1.5 million UK salary records, captured from job boards nationwide and classified by role, level and region. Then every benchmark is reviewed by a specialist. Here's exactly how.",
+    "No black box. Zigbert draws on a current database of over 1.5 million UK salary records, captured from job boards nationwide and classified by role, level and region. Then every dashboard is reviewed by a specialist. Here's exactly how.",
   cta: "Read The Full Methodology",
 };
 
@@ -383,7 +387,7 @@ export const methodology = {
       heading: "Expert review",
       paragraphs: [
         "This is what sets Zigbert apart. Self-service pay tools can produce results that simply don't look right: outliers, mismatched levels, or data drawn from the wrong comparator group. Without expert knowledge, it's hard to know what to trust.",
-        "Every Zigbert benchmark is reviewed by one of our reward specialists, who confirms it makes sense before publication. You get the speed of a dashboard with the reassurance that an expert has looked at the number and said, “Yes, that's good.”",
+        "Every Zigbert dashboard is reviewed by one of our reward specialists, who confirms it makes sense before publication. You get the speed of a dashboard with the reassurance that an expert has looked at it and said, “Yes, that's good.”",
       ],
     },
     {
