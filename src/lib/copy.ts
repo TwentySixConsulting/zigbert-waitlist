@@ -11,6 +11,8 @@ export const brand = {
   demoUrl: "https://twentysixconsulting.github.io/demo-client-dashboard/",
   endorsement: "by TwentySix Consulting · 20 years of reward expertise",
   launch: "Launching September 2026",
+  taglineLead: "Stop arguing about pay.",
+  taglineAccent: "Start delivering.",
 };
 
 // ── Launch announcement (top bar) ───────────────────────────────────
@@ -249,7 +251,7 @@ export const stats = [
   { value: "1.5M+", label: "records in our UK salary database" },
   { value: "Monthly", label: "data refresh, never stale" },
   { value: "1 rate", label: "clear market rate per role" },
-  { value: "Expert", label: "every benchmark specialist-reviewed" },
+  { value: "Expert", label: "every dashboard specialist-reviewed" },
 ];
 
 // ── Live charts showcase (adapted from the TwentySix dashboard) ──────

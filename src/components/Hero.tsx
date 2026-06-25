@@ -13,8 +13,8 @@ import {
 const ease = [0.22, 1, 0.36, 1] as const;
 
 const trustChips = [
-  "1.5M+ salary records",
-  "Every benchmark expert-reviewed",
+  "Curated from 1.5M+ salary records",
+  "Every dashboard expert-reviewed",
   "Refreshed monthly",
 ];
 
@@ -120,19 +120,6 @@ export default function Hero() {
             durationSeconds={32}
             className="mx-auto h-[440px] w-[300px] lg:h-[520px]"
           />
-
-          {/* the brand-promise badge, echoing "Yes, that's good." */}
-          <motion.div
-            className="absolute -bottom-2 -left-1 z-10 hidden items-center gap-2 rounded-full border border-line bg-surface px-3.5 py-2 shadow-lg sm:flex"
-            initial={{ opacity: 0, scale: 0.8 }}
-            animate={{ opacity: 1, scale: 1 }}
-            transition={{ duration: 0.5, ease, delay: 0.9 }}
-          >
-            <span className="accent-gradient flex h-5 w-5 items-center justify-center rounded-full text-[0.7rem] text-white">
-              ✓
-            </span>
-            <span className="text-sm font-semibold text-ink">“Yes, that's good.”</span>
-          </motion.div>
         </motion.div>
       </div>
     </section>
