@@ -319,7 +319,7 @@ export const founder = {
   name: "Rachel Crafts",
   role: "Managing Director · TwentySix Consulting",
   linkedin: "https://uk.linkedin.com/in/rachelcrafts",
-  photo: "", // ← set to "rachel.jpg" once the headshot is added to public/
+  photo: "rachel.jpg",
   intro: [
     "Employee pay is the biggest single cost for most businesses — and after 30 years in reward, I know how daunting it is to get right. Pay too little and you can't recruit. Pay too much and the wrong people stay put forever. And pay review season burns hours of management time going round in circles, rarely doing much for motivation.",
     "I've spent my career demystifying reward — as a Director of Reward, an ACAS Independent Expert in Equal Value, and an adviser to organisations across the whole spectrum, from tiny grassroots charities to global corporations. For the last 20 years I've done this through TwentySix Consulting, where my team and I give businesses the data, tools and framework to manage pay and benefits simply and cost-effectively.",
