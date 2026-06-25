@@ -3,7 +3,7 @@ import Reveal from "./Reveal";
 
 export default function About() {
   return (
-    <section id="about" className="scroll-mt-24 pt-20 pb-12 md:pt-28 md:pb-16">
+    <section id="about" className="scroll-mt-24 pt-20 pb-6 md:pt-28 md:pb-8">
       <div className="mx-auto max-w-6xl px-5">
         <Reveal className="mx-auto max-w-2xl text-center">
           <span className="eyebrow">{about.eyebrow}</span>
