@@ -59,7 +59,7 @@ export const whatIsZigbert = {
       num: "02",
       tag: "Benefits",
       title: "Benefits",
-      oneLiner: "Your benefits offer, through the market's eyes.",
+      oneLiner: "Where your benefits stand, category by category.",
       body:
         "See how your benefits compare against the market, from overall coverage and strength by category through to exactly where you over- or under-provide.",
       points: [
