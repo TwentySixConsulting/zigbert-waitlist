@@ -26,6 +26,9 @@ export default function Header() {
           <Link href="/methodology" className="transition-colors hover:text-ink">
             Methodology
           </Link>
+          <Link href="/faq" className="transition-colors hover:text-ink">
+            FAQ
+          </Link>
         </nav>
 
         <a href={`${import.meta.env.BASE_URL}#waitlist`} className="btn-primary text-sm">

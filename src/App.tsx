@@ -4,6 +4,7 @@ import Footer from "./components/Footer";
 import AnnouncementBar from "./components/AnnouncementBar";
 import Landing from "./pages/Landing";
 import Methodology from "./pages/Methodology";
+import FAQ from "./pages/FAQ";
 
 // "" in dev (base "/"), "/zigbert-waitlist" on GitHub Pages.
 const base = import.meta.env.BASE_URL.replace(/\/$/, "");
@@ -18,6 +19,7 @@ export default function App() {
           <Switch>
             <Route path="/" component={Landing} />
             <Route path="/methodology" component={Methodology} />
+            <Route path="/faq" component={FAQ} />
             <Route>
               <div className="mx-auto max-w-3xl px-5 py-32 text-center">
                 <h1 className="display text-3xl font-bold">Page not found</h1>

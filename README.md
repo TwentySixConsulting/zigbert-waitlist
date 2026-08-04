@@ -2,8 +2,8 @@
 
 Pre-launch waitlist landing page for **Zigbert**, TwentySix Consulting's pay & benefits
 intelligence dashboard (launching September 2026). Captures name + company + email into
-Supabase, explains the product via scroll-snap slides, and has a dedicated
-[methodology page](/methodology).
+Supabase, explains the product via scroll-snap slides, and has dedicated
+[methodology](/methodology) and [FAQ](/faq) pages.
 
 ## Stack
 
@@ -19,6 +19,20 @@ Supabase, explains the product via scroll-snap slides, and has a dedicated
 Near-white warm canvas, **clay** accent with a **logo-blue** (`#7285A5`) used for CTAs and the
 Benefits pillar, deep-navy ink text. Poppins (display) + Inter (body). All copy lives in
 `src/lib/copy.ts` — edit there.
+
+## FAQ page and Zigbot
+
+`/faq` is a flat list of accordion questions ([`src/pages/FAQ.tsx`](src/pages/FAQ.tsx)), with
+**Zigbot** ([`src/components/Zigbot.tsx`](src/components/Zigbot.tsx)) floating bottom-right.
+
+Zigbot runs entirely in the browser: no API, no server, no key. It scores the visitor's
+question against a knowledge base built from the FAQ questions on the page plus the extra
+Q&As in `zigbot.extras`, weighting the question and its keywords above the answer body, and
+returns the best match (or a fallback pointing at the consultants inbox).
+
+To edit the questions or teach Zigbot something new, edit `faq.items` or `zigbot.extras` in
+[`src/lib/copy.ts`](src/lib/copy.ts) — each extra takes `{ q, a, kw }`, where `kw` is a
+space-separated list of words a visitor might actually type for that question.
 
 ## Local development
 

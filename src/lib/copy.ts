@@ -433,3 +433,209 @@ export const methodology = {
     button: "Join The Waitlist",
   },
 };
+
+// ── FAQ page ────────────────────────────────────────────────────────
+// The questions shown on /faq, as a flat list of accordions.
+// Zigbot also reads these as part of its knowledge base.
+export const faq = {
+  titleLead: "Frequently asked",
+  titleAccent: "questions",
+  lede: "Everything you might want to know about Zigbert — what it is, where its data comes from, how it compares, and how to use it.",
+  footLead: "Still need help? Email us at",
+  items: [
+    {
+      q: "What is Zigbert?",
+      a: "Zigbert is a UK pay and benefits benchmarking platform — the Reward Intelligence product from TwentySix Consulting. It gives employers a clear market rate for every role, drawn from over 1.5 million UK salary records and checked by a reward specialist before it reaches you.",
+    },
+    {
+      q: "Who is behind Zigbert?",
+      a: "Zigbert is made by TwentySix Consulting, a UK reward consultancy with 20 years of experience. That advisory heritage is why every dashboard is reviewed by a reward specialist rather than served straight from an algorithm — the expertise sits behind the product, not just alongside it.",
+    },
+    {
+      q: "Where does Zigbert's salary data come from?",
+      a: "Zigbert draws on a database of over 1.5 million UK salary records, built from live job adverts and supplemented with official sources including the ONS Annual Survey of Hours and Earnings (ASHE). Because it reads pay from adverts as they're posted, it reflects what employers are offering now, not figures volunteered months ago.",
+    },
+    {
+      q: "How accurate is Zigbert's benchmarking data?",
+      a: "Every Zigbert dashboard is reviewed by a reward specialist before it reaches you, and each figure carries a confidence indicator so you can see how strong the underlying data is. Rather than return a raw average, Zigbert screens out misleading outliers and applies expert judgement — the step that stops you acting on a mad result.",
+    },
+    {
+      q: "How is Zigbert different from free tools like Glassdoor or Payscale?",
+      a: "Unlike free crowd-sourced tools, Zigbert's data is reviewed by a reward specialist, compared on a genuine like-for-like basis, and screened for misleading outliers. Free tools rely largely on self-reported figures with little quality control, which is why their numbers can be so wide or skewed.",
+    },
+    {
+      q: "How is Zigbert different from a traditional salary survey?",
+      a: "A traditional salary survey collects figures once a year from employers who choose to take part; Zigbert reads pay from live job adverts, so its data moves with the market in near real time. That makes it both more current and far broader than a survey that depends on voluntary participation.",
+    },
+    {
+      q: "How often is Zigbert's data updated?",
+      a: "The underlying salary data is updated continuously as new job adverts are published, and your dashboard refreshes monthly. This means your benchmarks track the market as it moves, rather than being fixed to a single annual snapshot.",
+    },
+    {
+      q: "Does Zigbert benchmark benefits as well as pay?",
+      a: "Yes — Zigbert benchmarks benefits alongside base pay, giving you a view of total reward rather than salary alone. It's Pay & Benefits Intelligence: two roles on the same salary can offer very different overall packages.",
+    },
+    {
+      q: "How does Zigbert decide which roles to compare?",
+      a: "Zigbert builds a comparator group from three things: the role's function, the industry, and the job level. This makes sure you're compared against genuinely similar roles, not anything that happens to share a job title.",
+    },
+    {
+      q: "What information do I need to get a benchmark?",
+      a: "You provide the role title, its function and level, the industry, the location, and your organisation's size. Those details let Zigbert assemble a like-for-like comparator group and return a market rate specific to your situation.",
+    },
+    {
+      q: "When does Zigbert launch, and how is it priced?",
+      a: "Zigbert launches in September 2026 as a monthly subscription covering pay and benefits benchmarking, ongoing data updates, and support. Join the waitlist to be notified the moment it goes live.",
+    },
+    {
+      q: "Can I trust benchmarks built from job-advert data?",
+      a: "Yes — advertised pay is what employers are genuinely offering to compete for talent, which makes it a strong, current signal of the live market. Zigbert strengthens it further with outlier screening and a reward specialist's review of every dashboard, so you're never relying on raw advert data alone.",
+    },
+  ],
+};
+
+// ── Zigbot (FAQ chat assistant) ─────────────────────────────────────
+// Zigbot's knowledge base is the FAQ items above PLUS the extras below.
+// To teach it something new, add another { q, a, kw } entry to `extras`.
+// `kw` is a space-separated list of words a visitor might use for that
+// question; it is weighted as heavily as the question itself.
+export const zigbot = {
+  launch: "Ask Zigbot",
+  name: "Zigbot",
+  role: "FAQ assistant · here to help",
+  placeholder: "Ask about Zigbert…",
+  hello:
+    "Hi, I'm Zigbot 👋 Ask me anything about Zigbert — what it does, where our data comes from, or how to get a benchmark.",
+  typing: "Zigbot is typing…",
+  greeting:
+    "Happy to help! Ask me about Zigbert — what it is, where the data comes from, how it compares, or how to get a benchmark.",
+  fallback:
+    "I don't have a specific answer to that one. The questions above cover the essentials — or a Zigbert specialist can help directly at consultants@twentysixconsulting.co.uk. Zigbert launches September 2026; join the waitlist at zigbert.co.uk.",
+  extras: [
+    {
+      q: "Who is Zigbert for?",
+      kw: "who for audience users customers hr founder hiring manager reward team",
+      a: "Zigbert is built for employers making pay decisions — HR teams, reward managers, founders, and hiring managers who need a defensible market rate rather than a guess. It's designed to be usable whether or not you have a dedicated reward function.",
+    },
+    {
+      q: "What does Pay and Benefits Intelligence mean?",
+      kw: "reward intelligence meaning term total package",
+      a: "It means Zigbert benchmarks the whole package — base pay and benefits — not just salary in isolation. Two roles on the same salary can offer very different total reward, and Zigbert is built to show that.",
+    },
+    {
+      q: "How many salary records is Zigbert based on?",
+      kw: "many number size dataset million records volume",
+      a: "Over 1.5 million UK salary records. That scale is what lets Zigbert build a meaningful comparator group even for more specific roles.",
+    },
+    {
+      q: "Does Zigbert use official data sources like ONS?",
+      kw: "ons official government ashe source",
+      a: "Yes. Alongside live job-advert data, Zigbert draws on official sources including the ONS Annual Survey of Hours and Earnings (ASHE) to ground its figures.",
+    },
+    {
+      q: "Is Zigbert's data checked by a human or fully automated?",
+      kw: "human automated automatic algorithm checked review manual robot ai",
+      a: "Both — the data is gathered and processed automatically at scale, then a reward specialist reviews every dashboard before it reaches you. That human review is the core of the “yes, that's a sensible number” promise.",
+    },
+    {
+      q: "Is Zigbert better than running my own salary survey?",
+      kw: "own diy survey run myself build better",
+      a: "For most employers, yes — a DIY survey is slow, depends on who's willing to share, and dates quickly. Zigbert gives you a broader, continuously refreshed dataset with expert review built in, without the legwork.",
+    },
+    {
+      q: "What's the difference between advertised pay data and survey data?",
+      kw: "advertised advert survey difference live",
+      a: "Advertised pay reflects what employers are offering right now to attract candidates; survey data reflects what people were paid when the survey was run, often months earlier. Zigbert uses advertised data so your benchmark reflects the market you're actually hiring in.",
+    },
+    {
+      q: "Why not just use ONS data directly?",
+      kw: "ons directly just national average",
+      a: "ONS data is authoritative but broad and lagging — great for national averages, less so for a specific role in a specific sector today. Zigbert uses ONS to ground its figures but layers live, role-level advert data on top so the answer is specific and current.",
+    },
+    {
+      q: "How do I get a salary benchmark from Zigbert?",
+      kw: "how get benchmark work works process steps run start use",
+      a: "You enter a few details about the role — its title, function and level, the industry, the location, and your organisation's size — and Zigbert returns a market rate with its supporting range. The result comes as a specialist-reviewed dashboard, not a bare number.",
+    },
+    {
+      q: "How do I know if I'm paying a role competitively?",
+      kw: "paying competitively competitive fair enough underpaying overpaying",
+      a: "Benchmark the role in Zigbert and compare your current pay against the market range for that function, level, industry and region. If you're sitting below the range, you're at risk on retention and hiring — and Zigbert shows exactly where you fall.",
+    },
+    {
+      q: "How much should I offer for a new hire?",
+      kw: "offer new hire candidate recruit starting",
+      a: "Run the role through Zigbert to get the current market rate and range, then position your offer within it based on the candidate's experience and how competitive you need to be. Because the data is advert-based, it reflects what other employers are offering right now.",
+    },
+    {
+      q: "How do I set a salary range for a new role?",
+      kw: "set range band minimum maximum midpoint new role",
+      a: "Zigbert gives you the market rate plus the supporting range for the role, which you can use to set a sensible minimum, midpoint and maximum — anchored to real market data rather than internal precedent alone.",
+    },
+    {
+      q: "How do I check if my team is underpaid versus the market?",
+      kw: "team underpaid below retention flight risk staff",
+      a: "Benchmark each team member's role and compare their pay to the market range Zigbert returns. Anyone consistently below range is a retention risk you can now evidence and act on.",
+    },
+    {
+      q: "What's a competitive benefits package in the UK?",
+      kw: "competitive benefits package perks total reward",
+      a: "Zigbert benchmarks benefits alongside pay, so you can see how your package compares on total reward rather than salary alone — helping you spot where you're competitive and where you're quietly behind.",
+    },
+    {
+      q: "What stops Zigbert producing a misleading figure?",
+      kw: "misleading wrong mistake error mad result inaccurate outlier",
+      a: "Two things: automated screening that removes outliers and thin data, and a reward specialist who reviews every dashboard before it reaches you. That combination is designed specifically to avoid the mad result that erodes trust in automated tools.",
+    },
+    {
+      q: "Where does Zigbert's data not work well?",
+      kw: "limitations weakness rare senior niche bespoke gaps confidence weak",
+      a: "Zigbert is strongest where roles are commonly advertised; for very rare, senior or highly bespoke roles, advert data thins out — and the confidence indicator tells you when that's the case. Being upfront about this is part of how Zigbert earns trust.",
+    },
+    {
+      q: "How much will Zigbert cost?",
+      kw: "cost price pricing expensive subscription fee plan much money",
+      a: "Zigbert will be a monthly subscription covering pay and benefits benchmarking, ongoing data updates, and support. The exact price isn't public yet — join the waitlist at zigbert.co.uk and we'll share pricing as we approach launch.",
+    },
+    {
+      q: "How do I join the waitlist?",
+      kw: "waitlist join sign up early access notify list register",
+      a: "You can join the waitlist directly at zigbert.co.uk to be notified the moment Zigbert goes live.",
+    },
+    {
+      q: "Is there a free trial or demo?",
+      kw: "free trial demo try test preview sample",
+      a: "We'll confirm trial and demo details closer to launch. In the meantime, join the waitlist at zigbert.co.uk, or contact consultants@twentysixconsulting.co.uk to talk through your needs.",
+    },
+    {
+      q: "Is my data kept confidential when I use Zigbert?",
+      kw: "confidential privacy private secure gdpr safe kept",
+      a: "We take data handling seriously, and we'll publish full confidentiality details closer to launch. For specifics in the meantime, contact consultants@twentysixconsulting.co.uk.",
+    },
+    {
+      q: "Does Zigbert cover my industry and region?",
+      kw: "cover industry sector region regional location area geography",
+      a: "Zigbert covers a broad range of UK industries and adjusts for regional pay differences across the country. To check coverage for a specific sector or location, contact consultants@twentysixconsulting.co.uk.",
+    },
+    {
+      q: "Can Zigbert benchmark a whole pay structure, not just one role?",
+      kw: "whole structure multiple roles many bulk framework grades all",
+      a: "For details on benchmarking multiple roles or a full pay structure, contact consultants@twentysixconsulting.co.uk — we'll confirm exactly what's supported at launch.",
+    },
+    {
+      q: "Does Zigbert work for small companies or only large ones?",
+      kw: "small large company size sme startup enterprise big only",
+      a: "Zigbert asks for your organisation's size precisely so it can benchmark fairly for companies of different scales — so it isn't just for large employers.",
+    },
+    {
+      q: "How quickly do I get a result?",
+      kw: "quickly fast speed turnaround long time wait instant",
+      a: "Every dashboard is reviewed by a reward specialist before it reaches you, so the exact turnaround will be confirmed closer to launch. Join the waitlist at zigbert.co.uk to find out first.",
+    },
+    {
+      q: "How does Zigbert handle roles with no advertised salary?",
+      kw: "advertised undisclosed hidden missing blank stated",
+      a: "Where a role's pay isn't stated in an advert, it doesn't drag the benchmark — Zigbert works from the records where pay is disclosed and flags where data is thinner via the confidence indicator.",
+    },
+  ],
+};
