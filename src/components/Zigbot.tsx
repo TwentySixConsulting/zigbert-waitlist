@@ -1,49 +1,19 @@
 import { useEffect, useMemo, useRef, useState } from "react";
+import { buildBrain, type Entry } from "../lib/zigbotBrain";
 import { faq, zigbot } from "../lib/copy";
 
-/* ==========================================================
-   Zigbot's brain — 100% in-browser, no API, no server.
-   It matches the visitor's question against the FAQ content:
-   the questions shown on the FAQ page PLUS the extra Q&As in
-   `zigbot.extras`. To add knowledge, drop another {q, a, kw}
-   entry into that list in src/lib/copy.ts.
-   ========================================================== */
+/* Zigbot — the FAQ assistant on /faq. The matching itself lives in
+   ../lib/zigbotBrain.ts; this file is the chat window around it.
 
-type Entry = { q: string; a: string; kw: string };
+   To edit what Zigbot knows, edit `faq.items` or `zigbot.extras` in
+   ../lib/copy.ts. Nothing here needs touching. */
 
-const STOP: Record<string, 1> = {};
-(
-  "the a an is are do does did i my me we our you your to of for in on at by and or it its " +
-  "what how when where who why can could should will would with as be been being this that " +
-  "these those than not no vs versus about get got use using use them they their there here " +
-  "if so just only also more most any some hi hello hey thanks thank ok okay please zigbert zigbot"
-)
-  .split(" ")
-  .forEach((w) => {
-    STOP[w] = 1;
-  });
-
-function tokenize(s: string): string[] {
-  return (String(s).toLowerCase().match(/[a-z0-9]+/g) || [])
-    .map((t) => (t.length > 3 && t.charAt(t.length - 1) === "s" ? t.slice(0, -1) : t))
-    .filter((t) => t.length >= 2 && !STOP[t]);
-}
-
-// Precompute a token→weight bag for each entry
-// (question/keywords weigh more than the answer body).
-function buildBag(e: Entry): Record<string, number> {
-  const bag: Record<string, number> = {};
-  const add = (str: string, w: number) =>
-    tokenize(str).forEach((t) => {
-      if (!bag[t] || bag[t] < w) bag[t] = w;
-    });
-  add(e.q, 3);
-  add(e.kw, 3);
-  add(e.a, 1);
-  return bag;
-}
-
-type Msg = { role: "bot" | "user" | "typing"; text: string };
+type Msg = {
+  role: "bot" | "user" | "typing";
+  text: string;
+  /** Questions offered as clickable chips under a bot message. */
+  suggestions?: string[];
+};
 
 export default function Zigbot() {
   const [open, setOpen] = useState(false);
@@ -55,46 +25,47 @@ export default function Zigbot() {
   const msgsRef = useRef<HTMLDivElement>(null);
   const greeted = useRef(false);
 
-  // Knowledge base: the on-page FAQ questions + the extras.
-  const kb = useMemo(() => {
-    const entries: Entry[] = [
-      ...faq.items.map((i) => ({ q: i.q, a: i.a, kw: "" })),
+  const entries: Entry[] = useMemo(
+    () => [
+      ...faq.items.map((i) => ({ q: i.q, a: i.a, kw: i.kw ?? "" })),
       ...zigbot.extras,
-    ];
-    return entries.map((e) => ({ entry: e, bag: buildBag(e) }));
-  }, []);
+    ],
+    []
+  );
+  const brain = useMemo(() => buildBrain(entries), [entries]);
 
-  function reply(query: string): string {
-    const seen: Record<string, 1> = {};
-    const qt: string[] = [];
-    tokenize(query).forEach((t) => {
-      if (!seen[t]) {
-        seen[t] = 1;
-        qt.push(t);
-      }
-    });
-    if (!qt.length) return zigbot.greeting;
+  function respondTo(question: string) {
+    setMsgs((m) => [...m, { role: "user", text: question }, { role: "typing", text: zigbot.typing }]);
 
-    let best: Entry | null = null;
-    let bestScore = 0;
-    kb.forEach(({ entry, bag }) => {
-      let s = 0;
-      qt.forEach((t) => {
-        if (bag[t]) s += bag[t];
-      });
-      if (s > bestScore) {
-        bestScore = s;
-        best = entry;
-      }
-    });
-    return bestScore >= 3 && best ? (best as Entry).a : zigbot.fallback;
+    window.setTimeout(() => {
+      // A chip is a question we already hold, so answer it directly rather
+      // than putting our own wording back through the matcher.
+      const exact = entries.find((e) => e.q === question);
+      const reply = exact
+        ? ({ kind: "answer", text: exact.a } as const)
+        : brain.ask(question, {
+            greeting: zigbot.greeting,
+            fallback: zigbot.fallback,
+            unsure: zigbot.unsure,
+            ambiguous: zigbot.ambiguous,
+          });
+
+      setMsgs((m) => [
+        ...m.filter((x) => x.role !== "typing"),
+        {
+          role: "bot",
+          text: reply.text,
+          suggestions: reply.kind === "suggest" ? reply.suggestions : undefined,
+        },
+      ]);
+    }, 300);
   }
 
   function openPanel() {
     setOpen(true);
     if (!greeted.current) {
       greeted.current = true;
-      setMsgs([{ role: "bot", text: zigbot.hello }]);
+      setMsgs([{ role: "bot", text: zigbot.hello, suggestions: zigbot.starters }]);
     }
   }
 
@@ -108,10 +79,7 @@ export default function Zigbot() {
     const q = text.trim();
     if (!q) return;
     setText("");
-    setMsgs((m) => [...m, { role: "user", text: q }, { role: "typing", text: zigbot.typing }]);
-    window.setTimeout(() => {
-      setMsgs((m) => [...m.filter((x) => x.role !== "typing"), { role: "bot", text: reply(q) }]);
-    }, 300);
+    respondTo(q);
   }
 
   useEffect(() => {
@@ -164,8 +132,19 @@ export default function Zigbot() {
 
         <div className="zigbot-msgs" ref={msgsRef} aria-live="polite">
           {msgs.map((m, i) => (
-            <div key={i} className={`zigbot-msg ${m.role === "typing" ? "bot typing" : m.role}`}>
-              {m.text}
+            <div key={i} className="zigbot-turn">
+              <div className={`zigbot-msg ${m.role === "typing" ? "bot typing" : m.role}`}>
+                {m.text}
+              </div>
+              {m.suggestions?.length ? (
+                <div className="zigbot-chips">
+                  {m.suggestions.map((s) => (
+                    <button key={s} type="button" className="zigbot-chip" onClick={() => respondTo(s)}>
+                      {s}
+                    </button>
+                  ))}
+                </div>
+              ) : null}
             </div>
           ))}
         </div>

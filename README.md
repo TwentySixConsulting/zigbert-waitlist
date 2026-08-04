@@ -25,14 +25,39 @@ Benefits pillar, deep-navy ink text. Poppins (display) + Inter (body). All copy 
 `/faq` is a flat list of accordion questions ([`src/pages/FAQ.tsx`](src/pages/FAQ.tsx)), with
 **Zigbot** ([`src/components/Zigbot.tsx`](src/components/Zigbot.tsx)) floating bottom-right.
 
-Zigbot runs entirely in the browser: no API, no server, no key. It scores the visitor's
-question against a knowledge base built from the FAQ questions on the page plus the extra
-Q&As in `zigbot.extras`, weighting the question and its keywords above the answer body, and
-returns the best match (or a fallback pointing at the consultants inbox).
+Zigbot runs entirely in the browser: no API, no server, no key. The matching lives in
+[`src/lib/zigbotBrain.ts`](src/lib/zigbotBrain.ts), which scores the visitor's question
+against a knowledge base built from the FAQ questions on the page plus the extra Q&As in
+`zigbot.extras`. It weighs rare words far above common ones (in a knowledge base about pay
+benchmarking, "benchmark" tells you almost nothing and "gdpr" tells you almost everything),
+gives adjacent word pairs a bonus, and penalises any answer that ignores the rarest word in
+the question.
+
+**It would rather ask than guess.** Where two answers are genuinely close, or the question
+is too vague, or it leans on a word the knowledge base has never seen, Zigbot offers the
+nearest questions as clickable options instead of stating something wrong. A wrong answer
+delivered confidently is the failure mode worth designing against.
 
 To edit the questions or teach Zigbot something new, edit `faq.items` or `zigbot.extras` in
-[`src/lib/copy.ts`](src/lib/copy.ts) — each extra takes `{ q, a, kw }`, where `kw` is a
-space-separated list of words a visitor might actually type for that question.
+[`src/lib/copy.ts`](src/lib/copy.ts). Both take `{ q, a, kw }`, where `kw` is a
+space-separated list of words a visitor might actually type — synonyms, plain English, and
+concrete examples (sectors, places, sizes). `kw` is never displayed; it only widens what
+that question will match. Keywords are cheap and are the main way to improve Zigbot.
+
+Two things to avoid in `kw`: filler words ("about", "explain"), which pull unrelated
+questions onto that entry, and words that only make sense as part of a phrase — "flight"
+from "flight risk" once had Zigbot answering "book me a flight".
+
+### Testing it
+
+```bash
+npm run test:zigbot
+```
+
+89 real-world phrasings checked against the question each should reach.
+[`test/zigbot.test.mjs`](test/zigbot.test.mjs) fails the run only on a *confidently wrong*
+answer; falling back to offering options is the designed behaviour, and is reported
+separately. Add a case whenever you add or reword a question.
 
 ## Local development
 

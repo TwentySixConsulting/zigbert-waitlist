@@ -449,6 +449,39 @@
   font-style: italic;
 }
 
+/* A turn groups a message with any questions offered beneath it */
+.zigbot-turn {
+  display: flex;
+  flex-direction: column;
+  gap: 0.45rem;
+}
+.zigbot-chips {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0.35rem;
+  padding-left: 0.1rem;
+}
+.zigbot-chip {
+  max-width: 92%;
+  text-align: left;
+  cursor: pointer;
+  border-radius: 0.9rem;
+  border: 1px solid var(--color-clay-tint);
+  background: var(--color-surface);
+  color: var(--color-clay-deep);
+  padding: 0.4rem 0.7rem;
+  font: inherit;
+  font-size: 0.87rem;
+  line-height: 1.35;
+  font-weight: 500;
+  transition: background 0.18s ease, border-color 0.18s ease;
+}
+.zigbot-chip:hover {
+  background: rgba(201, 120, 90, 0.08);
+  border-color: var(--color-clay);
+}
+
 .zigbot-input {
   display: flex;
   gap: 0.5rem;
