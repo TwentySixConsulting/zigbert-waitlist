@@ -11,8 +11,8 @@ export default function Footer() {
           <p className="mt-2 max-w-sm text-sm text-white/60">{brand.endorsement}</p>
         </div>
         <nav className="flex flex-wrap gap-x-7 gap-y-2 text-sm text-white/70">
-          <a href="#waitlist" className="transition-colors hover:text-white">
-            Join The Waitlist
+          <a href="#contact" className="transition-colors hover:text-white">
+            Get In Touch
           </a>
           <a href={`mailto:${brand.email}`} className="transition-colors hover:text-white">
             {brand.email}
@@ -37,7 +37,7 @@ export default function Footer() {
       </div>
       <div className="border-t border-white/10">
         <p className="mx-auto max-w-6xl px-5 py-5 text-xs text-white/45">
-          © {year} TwentySix Consulting. Zigbert is a TwentySix Consulting product. {brand.launch}.
+          © {year} TwentySix Consulting. Zigbert is a TwentySix Consulting product. {brand.launch}
         </p>
       </div>
     </footer>

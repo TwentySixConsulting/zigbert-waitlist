@@ -1,4 +1,4 @@
-// Centralised copy for the Zigbert waitlist site.
+// Centralised copy for the Zigbert marketing site.
 // Narrative drawn from "Introducing Zigbert: Reward Intelligence You Can Trust".
 // Edit here to tweak any wording. Components read from this file.
 
@@ -10,28 +10,28 @@ export const brand = {
   email: "consultants@twentysixconsulting.co.uk",
   demoUrl: "https://twentysixconsulting.github.io/demo-client-dashboard/",
   endorsement: "by TwentySix Consulting · 20 years of reward expertise",
-  launch: "Launching September 2026",
+  launch: "Now live!",
   taglineLead: "Stop arguing about pay.",
   taglineAccent: "Start delivering.",
 };
 
 // ── Launch announcement (top bar) ───────────────────────────────────
 export const launch = {
-  badge: "Launching September 2026",
-  banner: "Zigbert launches September 2026.",
-  bannerStrong: "Join the waitlist now, it takes seconds.",
-  cta: "Sign Up Now",
+  badge: "Zigbert is now live!",
+  banner: "Zigbert is now live!",
+  bannerStrong: "Book a demo and see your own roles benchmarked.",
+  cta: "Get In Touch",
 };
 
 export const hero = {
-  eyebrow: "Reward intelligence · Launching September 2026",
+  eyebrow: "Reward intelligence · Now live!",
   headline: "Know what to pay.",
   headlineAccent: "And trust the answer.",
   subhead:
     "Zigbert gives you a clear market rate for every role, drawn from our database of over 1.5 million UK salary records and reviewed by our reward specialists. No complexity, no confusion, no second-guessing the data.",
-  ctaPrimary: "Join The Waitlist",
+  ctaPrimary: "Get In Touch",
   ctaSecondary: "See How It Works",
-  note: "Sign up takes seconds. We'll email you once before launch, then that's it.",
+  note: "Tell us a little about your organisation and we'll set up a demo built around your roles.",
 };
 
 // ── What is Zigbert? (explainer, two co-equal pillars) ──────────────
@@ -40,7 +40,7 @@ export const whatIsZigbert = {
   title: "Your pay and benefits, through the market's eyes",
   lede:
     "Zigbert is a reward intelligence platform from TwentySix Consulting. It answers the two questions every organisation wrestles with — are we paying the right rate, and is our benefits offer competitive? — in one simple dashboard, grounded in real market data and checked by a reward specialist before it reaches you.",
-  period: "Q2 2026",
+  period: "Available now",
   pillars: [
     {
       num: "01",
@@ -336,22 +336,22 @@ export const methodologyTeaser = {
   cta: "Read The Full Methodology",
 };
 
-// ── Waitlist (slide 15) ─────────────────────────────────────────────
-export const waitlist = {
-  eyebrow: "Be first in · Launching September 2026",
-  title: "Join the Zigbert waitlist",
-  body: "Sign up now and we'll invite you the moment Zigbert opens in September 2026. It only takes a few seconds, and early sign-ups get first access and launch pricing.",
-  reassure: "Not sure it's the right fit yet? Sign up and we'll happily send you more information and arrange a demo, so you can see exactly how it works.",
+// ── Contact / demo request (slide 15) ───────────────────────────────
+export const contact = {
+  eyebrow: "Now live! · Book a demo",
+  title: "Talk to us about Zigbert",
+  body: "Zigbert is now live and taking on new organisations. Leave your details and one of our reward specialists will come back to you with a walkthrough, pricing, and a demo built around the roles you care about.",
+  reassure: "Not sure it's the right fit yet? Ask us anything. We are happy to talk it through and show you the dashboard before you commit to anything.",
   contactLead: "Prefer to talk first? Get in touch to find out more:",
   perk:
-    "Want a taste now? Once you're on the list, send us your 5–10 hardest roles and we'll show you the market rate, how confident the benchmark is, and where your pay sits.",
+    "Want to see it on your own data? Send us your 5–10 hardest roles and we'll show you the market rate, how confident the benchmark is, and where your pay sits.",
   success: {
-    title: "Thank you for signing up!",
-    body: "You're on the Zigbert waitlist. We'll be in touch shortly to walk you through a demo and give you all the launch pricing details.",
+    title: "Thank you, we've got your details!",
+    body: "One of our reward specialists will be in touch shortly to arrange your demo and talk you through pricing.",
   },
   successReturning: {
-    title: "You're already on the list!",
-    body: "Good news, you're already signed up. We'll be in touch before launch in September 2026 with your early access and launch pricing. No need to do anything else.",
+    title: "You're already on our list!",
+    body: "We already have your details, so there's no need to do anything else. Someone will be in touch shortly about your demo and pricing.",
   },
   fields: {
     name: "Your name",
@@ -361,8 +361,8 @@ export const waitlist = {
     role: "Your role (optional)",
   },
   sizes: ["1–49", "50–99", "100–149", "150–199", "200–249", "250–299", "300–499", "500+"],
-  submit: "Join The Waitlist",
-  submitting: "Joining…",
+  submit: "Get In Touch",
+  submitting: "Sending…",
   error: "Something went wrong. Please try again, or email us directly.",
 };
 
@@ -429,8 +429,8 @@ export const methodology = {
   ],
   cta: {
     title: "Want this for your organisation?",
-    body: "Zigbert opens in September 2026. Join The Waitlist for first access and launch pricing.",
-    button: "Join The Waitlist",
+    body: "Zigbert is now live! Get in touch and we'll walk you through it with your own roles in front of you.",
+    button: "Get In Touch",
   },
 };
 
@@ -494,9 +494,9 @@ export const faq = {
       a: "You provide the role title, its function and level, the industry, the location, and your organisation's size. Those details let Zigbert assemble a like-for-like comparator group and return a market rate specific to your situation.",
     },
     {
-      q: "When does Zigbert launch, and how is it priced?",
-      kw: "launch launching launches release released available live yet ready start using when date september soon priced pricing",
-      a: "Zigbert launches in September 2026 as a monthly subscription covering pay and benefits benchmarking, ongoing data updates, and support. Join the waitlist to be notified the moment it goes live.",
+      q: "Is Zigbert available now, and how is it priced?",
+      kw: "launch launching launched release released available live now yet ready start using when date soon priced pricing buy subscribe",
+      a: "Yes, Zigbert is now live! It runs as a monthly subscription covering pay and benefits benchmarking, ongoing data updates, and support. Get in touch and we'll talk you through pricing for your organisation and set up a demo.",
     },
     {
       q: "Can I trust benchmarks built from job-advert data?",
@@ -522,7 +522,7 @@ export const zigbot = {
   greeting:
     "Happy to help! Ask me about Zigbert — what it is, where the data comes from, how it compares, or how to get a benchmark.",
   fallback:
-    "I don't have a specific answer to that one. The questions above cover the essentials — or a Zigbert specialist can help directly at consultants@twentysixconsulting.co.uk. Zigbert launches September 2026; join the waitlist at zigbert.co.uk.",
+    "I don't have a specific answer to that one. The questions above cover the essentials — or a Zigbert specialist can help directly at consultants@twentysixconsulting.co.uk. Zigbert is now live! Get in touch at zigbert.co.uk to arrange a demo.",
   // Shown instead of guessing when the question is on topic but too vague,
   // or when two answers are both plausible.
   unsure: "I'm not certain I've understood. Is one of these what you're after?",
@@ -530,7 +530,7 @@ export const zigbot = {
   // Offered when the chat first opens, to show what Zigbot is good for.
   starters: [
     "Where does your data come from?",
-    "How much will it cost?",
+    "How much does it cost?",
     "How is this different from Glassdoor?",
   ],
   extras: [
@@ -615,24 +615,24 @@ export const zigbot = {
       a: "Zigbert is strongest where roles are commonly advertised; for very rare, senior or highly bespoke roles, advert data thins out — and the confidence indicator tells you when that's the case. Being upfront about this is part of how Zigbert earns trust.",
     },
     {
-      q: "How much will Zigbert cost?",
+      q: "How much does Zigbert cost?",
       kw: "cost costs price pricing expensive cheap subscription fee plan much money budget afford monthly yearly annual per month per year contract commitment minimum term notice cancel paying for",
-      a: "Zigbert will be a monthly subscription covering pay and benefits benchmarking, ongoing data updates, and support. The exact price isn't public yet — join the waitlist at zigbert.co.uk and we'll share pricing as we approach launch.",
+      a: "Zigbert is a monthly subscription covering pay and benefits benchmarking, ongoing data updates, and support. The exact price depends on what you need, so get in touch at zigbert.co.uk or email consultants@twentysixconsulting.co.uk and we'll give you a figure.",
     },
     {
-      q: "How do I join the waitlist?",
-      kw: "waitlist join sign up signup early access notify list register interested",
-      a: "You can join the waitlist directly at zigbert.co.uk to be notified the moment Zigbert goes live.",
+      q: "How do I get started with Zigbert?",
+      kw: "get started start sign up signup join buy subscribe onboard set up setup register interested contact speak talk",
+      a: "Get in touch at zigbert.co.uk or email consultants@twentysixconsulting.co.uk. We'll arrange a demo, talk through pricing and get you set up.",
     },
     {
-      q: "Is there a free trial or demo?",
-      kw: "free trial demo try test preview sample see it walkthrough",
-      a: "We'll confirm trial and demo details closer to launch. In the meantime, join the waitlist at zigbert.co.uk, or contact consultants@twentysixconsulting.co.uk to talk through your needs.",
+      q: "Can I see a demo of Zigbert?",
+      kw: "free trial demo try test preview sample see it walkthrough tour show me",
+      a: "Yes. Get in touch at zigbert.co.uk or email consultants@twentysixconsulting.co.uk and we'll walk you through the dashboard, using roles relevant to you so you can see exactly what you'd get.",
     },
     {
       q: "Is my data kept confidential when I use Zigbert?",
       kw: "confidential confidentiality privacy private secure security gdpr compliant dpa data protection safe kept competitors others see shared",
-      a: "We take data handling seriously, and we'll publish full confidentiality details closer to launch. For specifics in the meantime, contact consultants@twentysixconsulting.co.uk.",
+      a: "We take data handling seriously. For the full detail on how your data is stored and used, contact consultants@twentysixconsulting.co.uk and we'll talk you through it.",
     },
     {
       q: "Does Zigbert cover my industry and region?",
@@ -642,7 +642,7 @@ export const zigbot = {
     {
       q: "Can Zigbert benchmark a whole pay structure, not just one role?",
       kw: "whole structure multiple many roles jobs bulk batch framework grades all entire every our roles headcount",
-      a: "For details on benchmarking multiple roles or a full pay structure, contact consultants@twentysixconsulting.co.uk — we'll confirm exactly what's supported at launch.",
+      a: "For details on benchmarking multiple roles or a full pay structure, contact consultants@twentysixconsulting.co.uk and we'll talk through how best to cover it.",
     },
     {
       q: "Does Zigbert work for small companies or only large ones?",
@@ -652,7 +652,7 @@ export const zigbot = {
     {
       q: "How quickly do I get a result?",
       kw: "quickly fast speed turnaround lead time long how long wait waiting instant days hours",
-      a: "Every dashboard is reviewed by a reward specialist before it reaches you, so the exact turnaround will be confirmed closer to launch. Join the waitlist at zigbert.co.uk to find out first.",
+      a: "Every dashboard is reviewed by a reward specialist before it reaches you, so turnaround depends on how many roles you're benchmarking. Get in touch at zigbert.co.uk and we'll give you a timescale for your list of roles.",
     },
     {
       q: "How does Zigbert handle roles with no advertised salary?",

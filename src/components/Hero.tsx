@@ -73,7 +73,7 @@ export default function Hero() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, ease, delay: 0.18 }}
           >
-            <a href="#waitlist" className="btn-primary">
+            <a href="#contact" className="btn-primary">
               {hero.ctaPrimary}
             </a>
             <a href="#how" className="btn-ghost">

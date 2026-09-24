@@ -1,8 +1,8 @@
-# Zigbert — Waitlist Site
+# Zigbert — Marketing Site
 
-Pre-launch waitlist landing page for **Zigbert**, TwentySix Consulting's pay & benefits
-intelligence dashboard (launching September 2026). Captures name + company + email into
-Supabase, explains the product via scroll-snap slides, and has dedicated
+Marketing and enquiry site for **Zigbert**, TwentySix Consulting's pay & benefits
+intelligence dashboard (live since September 2026). Captures name + company + email into
+Supabase (still the `waitlist` table), explains the product via scroll-snap slides, and has dedicated
 [methodology](/methodology) and [FAQ](/faq) pages.
 
 ## Stack

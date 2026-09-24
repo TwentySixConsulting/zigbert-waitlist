@@ -47,7 +47,7 @@ export default function Methodology() {
       <div className="card mt-16 p-8 text-center sm:p-10">
         <h2 className="display text-2xl font-bold">{methodology.cta.title}</h2>
         <p className="mx-auto mt-3 max-w-md text-muted">{methodology.cta.body}</p>
-        <a href={`${import.meta.env.BASE_URL}#waitlist`} className="btn-primary mt-6">
+        <a href={`${import.meta.env.BASE_URL}#contact`} className="btn-primary mt-6">
           {methodology.cta.button}
         </a>
       </div>

@@ -31,8 +31,8 @@ export default function Header() {
           </Link>
         </nav>
 
-        <a href={`${import.meta.env.BASE_URL}#waitlist`} className="btn-primary text-sm">
-          Join The Waitlist
+        <a href={`${import.meta.env.BASE_URL}#contact`} className="btn-primary text-sm">
+          Get In Touch
         </a>
       </div>
       <p className="border-t border-line/60 bg-surface/40 py-1.5 text-center text-[0.7rem] font-medium tracking-wide text-muted">

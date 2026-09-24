@@ -1,6 +1,6 @@
 import { useState, type FormEvent, type ReactNode } from "react";
 import { motion } from "framer-motion";
-import { waitlist, brand } from "../lib/copy";
+import { contact, brand } from "../lib/copy";
 import { joinWaitlist } from "../lib/supabase";
 import Confetti from "./Confetti";
 
@@ -12,7 +12,7 @@ export default function WaitlistForm() {
   const [status, setStatus] = useState<Status>("idle");
   const [alreadyOnList, setAlreadyOnList] = useState(false);
   const [errors, setErrors] = useState<Record<string, string>>({});
-  const f = waitlist.fields;
+  const f = contact.fields;
 
   async function onSubmit(e: FormEvent<HTMLFormElement>) {
     e.preventDefault();
@@ -50,7 +50,7 @@ export default function WaitlistForm() {
   }
 
   if (status === "done") {
-    const msg = alreadyOnList ? waitlist.successReturning : waitlist.success;
+    const msg = alreadyOnList ? contact.successReturning : contact.success;
     return (
       <div className="card relative mx-auto max-w-xl overflow-hidden p-10 text-center">
         <Confetti />
@@ -84,10 +84,10 @@ export default function WaitlistForm() {
 
   return (
     <div className="card mx-auto max-w-xl p-7 sm:p-9">
-      <span className="eyebrow">{waitlist.eyebrow}</span>
-      <h2 className="display mt-3 text-2xl font-bold sm:text-3xl">{waitlist.title}</h2>
-      <p className="mt-3 text-muted">{waitlist.body}</p>
-      <p className="mt-4 text-muted">{waitlist.reassure}</p>
+      <span className="eyebrow">{contact.eyebrow}</span>
+      <h2 className="display mt-3 text-2xl font-bold sm:text-3xl">{contact.title}</h2>
+      <p className="mt-3 text-muted">{contact.body}</p>
+      <p className="mt-4 text-muted">{contact.reassure}</p>
 
       <form className="mt-6 space-y-4" onSubmit={onSubmit} noValidate>
         <Field label={f.name} name="name" error={errors.name} autoComplete="name" />
@@ -101,7 +101,7 @@ export default function WaitlistForm() {
               <option value="" disabled>
                 Select…
               </option>
-              {waitlist.sizes.map((s) => (
+              {contact.sizes.map((s) => (
                 <option key={s} value={s}>
                   {s}
                 </option>
@@ -125,15 +125,15 @@ export default function WaitlistForm() {
         />
 
         <button type="submit" className="btn-primary w-full" disabled={status === "submitting"}>
-          {status === "submitting" ? waitlist.submitting : waitlist.submit}
+          {status === "submitting" ? contact.submitting : contact.submit}
         </button>
 
         {status === "error" && (
-          <p className="text-center text-sm text-red-600">{waitlist.error}</p>
+          <p className="text-center text-sm text-red-600">{contact.error}</p>
         )}
 
         <p className="border-t border-line pt-4 text-center text-sm text-muted">
-          {waitlist.contactLead}{" "}
+          {contact.contactLead}{" "}
           <a href={`mailto:${brand.email}`} className="font-medium text-clay-deep hover:underline">
             {brand.email}
           </a>

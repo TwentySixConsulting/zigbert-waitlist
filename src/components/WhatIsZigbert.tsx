@@ -48,7 +48,7 @@ export default function WhatIsZigbert() {
         <Reveal className="mx-auto max-w-3xl text-center">
           <div className="mb-6">
             <a
-              href="#waitlist"
+              href="#contact"
               className="blue-gradient inline-flex items-center gap-2 rounded-full px-4 py-2 text-sm font-semibold text-white shadow-md transition-[filter] hover:brightness-105"
             >
               <span className="h-1.5 w-1.5 animate-pulse rounded-full bg-white/90" />

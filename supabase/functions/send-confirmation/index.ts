@@ -1,4 +1,4 @@
-// Supabase Edge Function — sends a confirmation email when someone joins the waitlist.
+// Supabase Edge Function — sends a confirmation email when someone gets in touch.
 //
 // Trigger: a Database Webhook (Database → Webhooks) on INSERT to public.waitlist,
 // pointing at this function. Supabase sends { type, table, record, ... }.
@@ -31,13 +31,13 @@ function emailHtml(firstName: string) {
           <div style="font-size:11px;letter-spacing:0.18em;text-transform:uppercase;opacity:.85;margin-top:2px;">Pay &amp; Benefits Intelligence</div>
         </div>
         <div style="padding:28px;">
-          <h1 style="font-size:22px;margin:0 0 14px;">You're on the waitlist 🎉</h1>
+          <h1 style="font-size:22px;margin:0 0 14px;">Thanks for getting in touch 🎉</h1>
           <p style="font-size:15px;line-height:1.6;color:${MUTED};margin:0 0 14px;">
-            Hi ${firstName}, thanks for signing up to Zigbert. You're officially on the list.
+            Hi ${firstName}, thanks for your interest in Zigbert. We've got your details.
           </p>
           <p style="font-size:15px;line-height:1.6;color:${MUTED};margin:0 0 14px;">
-            Zigbert launches in <strong style="color:${INK};">September 2026</strong>. We'll reach out
-            before then with your early access and launch pricing, so keep an eye on your inbox.
+            Zigbert is <strong style="color:${INK};">now live!</strong> One of our reward specialists
+            will be in touch shortly to arrange a demo and talk you through pricing, so keep an eye on your inbox.
           </p>
           <p style="font-size:15px;line-height:1.6;color:${MUTED};margin:0 0 22px;">
             Any questions in the meantime? Just reply to this email or contact us at
@@ -77,7 +77,7 @@ serve(async (req) => {
       body: JSON.stringify({
         from: FROM_EMAIL,
         to: email,
-        subject: "You're on the Zigbert waitlist 🎉",
+        subject: "Thanks for getting in touch with Zigbert 🎉",
         html: emailHtml(firstName),
       }),
     });

@@ -105,11 +105,11 @@ All logo PNGs have transparent backgrounds. Lockup aspect ratio ≈ **3.33 : 1**
 
 - **Product name:** Zigbert · **Parent:** TwentySix Consulting (a UK reward consultancy)
 - **Hero headline:** *"Know what to pay. And trust the answer."*
-- **Tagline (sign-off / waitlist):** *"Stop arguing about pay. Start delivering."*
+- **Tagline (sign-off / contact):** *"Stop arguing about pay. Start delivering."*
 - **One-liner:** A clear market rate for every role — drawn from a database of **over 1.5 million UK salary records** and checked by a reward specialist before it reaches you.
 - **Endorsement line (quiet, once per page):** *"by TwentySix Consulting · 20 years of reward expertise"*
 - **Core promise:** the expert-reviewed difference — *"Yes, that's good."* No "mad results". (Claim **"every dashboard is specialist-reviewed"**, not "every benchmark".)
-- **Launch:** Launching September 2026 · monthly subscription (pay + benefits + updates + support).
+- **Status:** Live since September 2026 · monthly subscription (pay + benefits + updates + support).
 - **Tone:** professional yet approachable; plain English; non-bureaucratic; confident, not hypey.
 
 ### Links

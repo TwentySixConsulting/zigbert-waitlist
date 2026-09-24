@@ -2,12 +2,12 @@ import { useEffect, useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
 
 /**
- * Mobile-only sticky "Join the waitlist" bar. Appears once the hero is
- * scrolled away and hides whenever the waitlist form itself is on screen.
+ * Mobile-only sticky "Get in touch" bar. Appears once the hero is
+ * scrolled away and hides whenever the contact form itself is on screen.
  */
 export default function StickyCTA() {
   const [scrolledPastHero, setScrolledPastHero] = useState(false);
-  const [waitlistVisible, setWaitlistVisible] = useState(false);
+  const [contactVisible, setContactVisible] = useState(false);
 
   useEffect(() => {
     const onScroll = () => setScrolledPastHero(window.scrollY > 640);
@@ -17,9 +17,9 @@ export default function StickyCTA() {
   }, []);
 
   useEffect(() => {
-    // Hide the bar whenever the waitlist form or the footer is on screen.
+    // Hide the bar whenever the contact form or the footer is on screen.
     const targets = [
-      document.getElementById("waitlist"),
+      document.getElementById("contact"),
       document.querySelector("footer"),
     ].filter(Boolean) as Element[];
     if (!targets.length) return;
@@ -28,7 +28,7 @@ export default function StickyCTA() {
     const io = new IntersectionObserver(
       (entries) => {
         entries.forEach((e) => seen.set(e.target, e.isIntersecting));
-        setWaitlistVisible([...seen.values()].some(Boolean));
+        setContactVisible([...seen.values()].some(Boolean));
       },
       { rootMargin: "0px 0px -40% 0px" }
     );
@@ -36,7 +36,7 @@ export default function StickyCTA() {
     return () => io.disconnect();
   }, []);
 
-  const show = scrolledPastHero && !waitlistVisible;
+  const show = scrolledPastHero && !contactVisible;
 
   return (
     <AnimatePresence>
@@ -50,11 +50,11 @@ export default function StickyCTA() {
         >
           <div className="flex items-center justify-between gap-3">
             <span className="text-sm font-semibold text-ink">
-              Launching Sept 2026
-              <span className="block text-xs font-normal text-muted">First access + launch pricing</span>
+              Zigbert is now live!
+              <span className="block text-xs font-normal text-muted">Book a demo with your own roles</span>
             </span>
-            <a href="#waitlist" className="btn-primary text-sm">
-              Join The Waitlist
+            <a href="#contact" className="btn-primary text-sm">
+              Get In Touch
             </a>
           </div>
         </motion.div>

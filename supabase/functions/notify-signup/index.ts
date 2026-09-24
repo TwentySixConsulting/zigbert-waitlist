@@ -35,7 +35,7 @@ serve(async (req) => {
 
     const html = `
       <div style="font-family:-apple-system,Segoe UI,Inter,Arial,sans-serif;color:#121c2b;">
-        <h2 style="margin:0 0 12px;font-size:18px;">New Zigbert waitlist sign-up</h2>
+        <h2 style="margin:0 0 12px;font-size:18px;">New Zigbert enquiry</h2>
         <table style="border-collapse:collapse;font-size:14px;">
           ${row("Name", r.name)}
           ${row("Company", r.company)}
@@ -57,7 +57,7 @@ serve(async (req) => {
         from: FROM_EMAIL,
         to: NOTIFY_TO,
         reply_to: email,
-        subject: `New waitlist sign-up: ${r.name ?? email}${r.company ? ` (${r.company})` : ""}`,
+        subject: `New Zigbert enquiry: ${r.name ?? email}${r.company ? ` (${r.company})` : ""}`,
         html,
       }),
     });
