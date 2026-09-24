@@ -1,3 +1,4 @@
+import LaunchBanner from "../components/LaunchBanner";
 import Hero from "../components/Hero";
 import WhatIsZigbert from "../components/WhatIsZigbert";
 import Problem from "../components/Problem";
@@ -16,6 +17,7 @@ import StickyCTA from "../components/StickyCTA";
 export default function Landing() {
   return (
     <>
+      <LaunchBanner />
       <WhatIsZigbert />
       <Hero />
       <Problem />

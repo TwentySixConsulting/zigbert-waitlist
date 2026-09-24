@@ -17,6 +17,15 @@ export const brand = {
 
 // ── Launch announcement (top bar) ───────────────────────────────────
 export const launch = {
+  // The big launch band at the top of the landing page.
+  chip: "Live now",
+  headlineLead: "Zigbert is",
+  headlineAccent: "now live!",
+  sub: "Pay and benefits benchmarking you can trust, ready to use today. Get in touch and we'll show you your own roles benchmarked against the market.",
+  ctaPrimary: "Get In Touch",
+  ctaSecondary: "See How It Works",
+  foot: "From TwentySix Consulting, built on over 1.5 million UK salary records and checked by a reward specialist.",
+  // The thin site-wide strip (inner pages).
   badge: "Zigbert is now live!",
   banner: "Zigbert is now live!",
   bannerStrong: "Book a demo and see your own roles benchmarked.",

@@ -1,4 +1,4 @@
-import { Route, Switch, Router } from "wouter";
+import { Route, Switch, Router, useLocation } from "wouter";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
 import AnnouncementBar from "./components/AnnouncementBar";
@@ -12,8 +12,22 @@ const base = import.meta.env.BASE_URL.replace(/\/$/, "");
 export default function App() {
   return (
     <Router base={base}>
+      <Shell />
+    </Router>
+  );
+}
+
+// Inside <Router> so it can read the current route.
+function Shell() {
+  const [location] = useLocation();
+  // The landing page opens with the full-width launch band, so the thin
+  // strip would just repeat it. Inner pages still get the strip.
+  const onLanding = location === "/";
+
+  return (
+    <>
       <div className="flex min-h-screen flex-col">
-        <AnnouncementBar />
+        {!onLanding && <AnnouncementBar />}
         <Header />
         <main className="flex-1">
           <Switch>
@@ -32,6 +46,6 @@ export default function App() {
         </main>
         <Footer />
       </div>
-    </Router>
+    </>
   );
 }

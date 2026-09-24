@@ -31,7 +31,10 @@ export default function Header() {
           </Link>
         </nav>
 
-        <a href={`${import.meta.env.BASE_URL}#contact`} className="btn-primary text-sm">
+        <a
+          href={`${import.meta.env.BASE_URL}#contact`}
+          className="btn-primary shrink-0 whitespace-nowrap px-4 text-sm sm:px-6"
+        >
           Get In Touch
         </a>
       </div>

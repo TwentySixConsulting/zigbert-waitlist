@@ -1,6 +1,6 @@
 import type { ComponentType, ReactNode } from "react";
 import { CheckCircle2, LineChart, Gift, CalendarClock } from "lucide-react";
-import { whatIsZigbert, launch } from "../lib/copy";
+import { whatIsZigbert } from "../lib/copy";
 import Reveal from "./Reveal";
 import { ScrollingShowcase } from "./ScrollingShowcase";
 import {
@@ -46,15 +46,6 @@ export default function WhatIsZigbert() {
     <section id="what" className="scroll-mt-24 py-20 md:py-28">
       <div className="mx-auto max-w-6xl px-5">
         <Reveal className="mx-auto max-w-3xl text-center">
-          <div className="mb-6">
-            <a
-              href="#contact"
-              className="blue-gradient inline-flex items-center gap-2 rounded-full px-4 py-2 text-sm font-semibold text-white shadow-md transition-[filter] hover:brightness-105"
-            >
-              <span className="h-1.5 w-1.5 animate-pulse rounded-full bg-white/90" />
-              {launch.badge}
-            </a>
-          </div>
           <span className="eyebrow">{whatIsZigbert.eyebrow}</span>
           <h2 className="display mt-3 text-3xl font-bold sm:text-4xl">{whatIsZigbert.title}</h2>
           <p className="mt-5 text-lg leading-relaxed text-muted">{whatIsZigbert.lede}</p>
