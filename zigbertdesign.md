@@ -88,7 +88,7 @@ Applied via component styles (`.btn-primary`, `.blue-gradient`), not a `@theme` 
 | `zigbert-mark.png` | Standalone mark, navy | Light backgrounds, watermarks |
 | `zigbert-mark-light.png` | Standalone mark, cream | Dark backgrounds, watermarks |
 | `favicon.png` | Mark centred on a cream rounded tile | Browser tab / app icon |
-| `og-cover.png` | 1200×630 social share image (centred lockup + headline) | Link previews (OG/Twitter) |
+| `og-cover-live.png` | 1200×630 social share image (centred lockup + headline) | Link previews (OG/Twitter) |
 
 All logo PNGs have transparent backgrounds. Lockup aspect ratio ≈ **3.33 : 1**; mark ≈ **0.74 : 1**.
 
