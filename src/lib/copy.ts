@@ -424,7 +424,7 @@ export const methodology = {
       heading: "Expert review",
       paragraphs: [
         "This is what sets Zigbert apart. Self-service pay tools can produce results that simply don't look right: outliers, mismatched roles, or data drawn from the wrong comparator group. Without expert knowledge, it's hard to know what to trust.",
-        "Every Zigbert dashboard is reviewed by one of our reward specialists, who confirms it makes sense before publication. Behind the scenes, accuracy is measured continuously and by category, records are reviewed daily and weekly, and the classification is refreshed and version-controlled on a regular cycle.",
+        "Every Zigbert dashboard is reviewed by one of our reward specialists, who confirms it makes sense before publication. Each month the market data is refreshed, and a specialist checks every range that moves before you see it.",
         "You get the speed of a dashboard with the reassurance that an expert has looked at it and said, “Yes, that's good.”",
       ],
     },
